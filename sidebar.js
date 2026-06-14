@@ -102,12 +102,14 @@ return '<li><a href="' + s.id + '.html">' + s.name + '</a></li>';
 // Append sidebar to body (it's position:fixed, so it doesn't need to be inside main)
 document.body.appendChild(nav);
 
-// Right-side ad rail
+// Right-side ad rail (only if not already in HTML)
+if (!document.querySelector('aside.ad-right')) {
 var adRail = document.createElement('aside');
 adRail.className = 'ad-right';
 adRail.id = 'ad-rail-right';
 adRail.innerHTML = '<div class="ad-unit" id="ad-right-top"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5741314833802600" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins></div><div class="ad-unit" id="ad-right-mid"></div>';
 document.body.appendChild(adRail);
+}
 
 // Mobile toggle
 var btn = document.createElement('button');
