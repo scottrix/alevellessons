@@ -1071,6 +1071,14 @@ padding-right: 1rem;
   color: #FF9900;
   margin-top: 0.3rem;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.affiliate-card-store img {
+  height: 14px;
+  width: auto;
+  vertical-align: middle;
 }
 .affiliate-card-urgency {
   font-size: 0.65rem;
@@ -1159,6 +1167,14 @@ padding-right: 1rem;
   color: #FF9900;
   margin-top: 0.3rem;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.ad-right .affiliate-card-store img {
+  height: 12px;
+  width: auto;
+  vertical-align: middle;
 }
 .ad-right .affiliate-card-urgency {
   font-size: 0.65rem;
