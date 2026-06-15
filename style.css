@@ -1093,14 +1093,15 @@ padding-right: 1rem;
    margin-bottom: 12px;
    text-decoration: none;
  }
- .fastmail-topbar img {
-   display: block;
-   width: 100%;
-   max-width: 970px;
-   height: auto;
-   border-radius: 8px;
-   transition: box-shadow 0.2s, transform 0.15s;
- }
+  .fastmail-topbar img {
+    display: block;
+    width: 100%;
+    max-width: 970px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto;
+    transition: box-shadow 0.2s, transform 0.15s;
+  }
  .fastmail-topbar:hover img {
    box-shadow: 0 4px 16px rgba(139,92,246,0.35);
    transform: translateY(-1px);
