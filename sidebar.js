@@ -107,7 +107,7 @@ if (!document.querySelector('aside.ad-right')) {
 var adRail = document.createElement('aside');
 adRail.className = 'ad-right';
 adRail.id = 'ad-rail-right';
-adRail.innerHTML = '<div class="ad-unit" id="ad-right-top"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5741314833802600" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins></div><div class="ad-unit" id="ad-right-mid"></div>';
+adRail.innerHTML = '<div class="ad-unit" id="ad-right-top"></div><div class="ad-unit" id="ad-right-mid"></div>';
 document.body.appendChild(adRail);
 }
 
@@ -130,11 +130,4 @@ btn.textContent = '\u2630';
 }
 });
 
-// Push AdSense ads into right rail
-try {
-var adIns = document.querySelector('#ad-right-top ins.adsbygoogle');
-if (adIns && window.adsbygoogle) {
-(adsbygoogle = window.adsbygoogle || []).push({});
-}
-} catch(e) {}
 })();
