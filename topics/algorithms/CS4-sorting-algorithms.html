@@ -11,6 +11,12 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://scottrix.github.io/gcserevise/topics/algorithms/CS4-sorting-algorithms.html">
 <link rel="canonical" href="https://scottrix.github.io/gcserevise/topics/algorithms/CS4-sorting-algorithms.html">
+<meta property="og:site_name" content="GCSE Revise">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sorting Algorithms">
+<meta name="twitter:description" content="Learn about bubble sort and merge sort algorithms for GCSE Computer Science. Free revision notes with step-by-step workings.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Show the state of the list [4, 2, 7, 1] after each pass of bubble sort.", "acceptedAnswer": {"@type": "Answer", "text": "Pass 1: Compare 4,2 → swap → [2,4,7,1]. Compare 4,7 → no swap. Compare 7,1 → swap → [2,4,1,7]. Pass 2: Compare 2,4 → no swap. Compare 4,1 → swap → [2,1,4,7]. Pass 3: Compare 2,1 → swap → [1,2,4,7]. Pass 4: No swaps → sorted."}}, {"@type": "Question", "name": "Describe the two phases of merge sort.", "acceptedAnswer": {"@type": "Answer", "text": "Phase 1 (Divide): Split the list recursively into smaller sublists until each sublist contains one element. Phase 2 (Merge): Repeatedly merge pairs of sorted sublists by comparing the first elements and building new sorted lists."}}, {"@type": "Question", "name": "Why is merge sort more efficient than bubble sort for large datasets?", "acceptedAnswer": {"@type": "Answer", "text": "Merge sort has O(n log n) time complexity while bubble sort has O(n²). As n grows large, n² grows much faster than n log n, so bubble sort becomes extremely slow while merge sort remains relatively efficient."}}, {"@type": "Question", "name": "Give one advantage of bubble sort over merge sort.", "acceptedAnswer": {"@type": "Answer", "text": "Bubble sort uses O(1) memory (sorts in place) while merge sort needs O(n) extra memory. Bubble sort is also simpler to implement and understand."}}, {"@type": "Question", "name": "How many comparisons would bubble sort make in the worst case for a list of 50 items?", "acceptedAnswer": {"@type": "Answer", "text": "Worst case: n(n-1)/2 = 50 × 49 / 2 = 1225 comparisons."}}]}</script>
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -407,6 +413,36 @@ When comparing sorting algorithms, always give the time complexity of each and e
 </section>
 
 
+
+<section class="section share-section">
+<h2>Share this page</h2>
+<div class="share-buttons">
+<a class="share-btn share-twitter" href="https://twitter.com/intent/tweet?url=https://scottrix.github.io/gcserevise/topics/algorithms/CS4-sorting-algorithms.html&text=Sorting Algorithms" target="_blank" rel="noopener" title="Share on Twitter">Twitter</a>
+<a class="share-btn share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://scottrix.github.io/gcserevise/topics/algorithms/CS4-sorting-algorithms.html" target="_blank" rel="noopener" title="Share on Facebook">Facebook</a>
+<a class="share-btn share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https://scottrix.github.io/gcserevise/topics/algorithms/CS4-sorting-algorithms.html" target="_blank" rel="noopener" title="Share on LinkedIn">LinkedIn</a>
+<a class="share-btn share-whatsapp" href="https://wa.me/?text=Sorting Algorithms%20https://scottrix.github.io/gcserevise/topics/algorithms/CS4-sorting-algorithms.html" target="_blank" rel="noopener" title="Share on WhatsApp">WhatsApp</a>
+<a class="share-btn share-copy" href="#" data-url="https://scottrix.github.io/gcserevise/topics/algorithms/CS4-sorting-algorithms.html" title="Copy link">Copy Link</a>
+</div>
+</section>
+<section class="section related-topics">
+<h2>Related</h2>
+<div class="related-group"><h4>Related Topics</h4><ul>
+<li><a href="CS1-representing-algorithms.html">Representing Algorithms</a></li>
+<li><a href="CS2-efficiency-algorithms.html">Efficiency of Algorithms</a></li>
+<li><a href="CS3-searching-algorithms.html">Searching Algorithms</a></li>
+<li><a href="CS5-trace-tables.html">Trace Tables</a></li>
+</ul></div>
+<div class="related-group"><h4>Related Subjects</h4><ul>
+<li><a href="../../ancient-history.html">Ancient History</a></li>
+<li><a href="../../art-and-design.html">Art And Design</a></li>
+<li><a href="../../astronomy.html">Astronomy</a></li>
+<li><a href="../../biology.html">Biology</a></li>
+<li><a href="../../business.html">Business</a></li>
+<li><a href="../../chemistry.html">Chemistry</a></li>
+<li><a href="../../citizenship-studies.html">Citizenship Studies</a></li>
+<li><a href="../../classical-civilisation.html">Classical Civilisation</a></li>
+</ul></div>
+</section>
 <section class="section affiliate-cta-end">
 <h3>Ready to ace your GCSE Computer Science exams?</h3>
 <p>Get the best revision books and guides to boost your grades.</p>
@@ -452,25 +488,25 @@ document.getElementById('theme-toggle').textContent = '☀️';
 <a href="https://www.amazon.co.uk/s?k=GCSE+Computer+Science+books&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Browse GCSE Computer Science Books →</div>
   <div class="affiliate-card-desc">Browse GCSE Computer Science revision books on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 <a href="https://www.amazon.co.uk/s?k=GCSE+All+Boards+books&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Browse GCSE All Boards Books →</div>
   <div class="affiliate-card-desc">Browse GCSE All Boards revision books on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 <a href="https://www.amazon.co.uk/s?k=Sorting+Algorithms+books&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Browse Sorting Algorithms Books →</div>
   <div class="affiliate-card-desc">Browse Sorting Algorithms books on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 <a href="https://www.amazon.co.uk/s?k=GCSE+revision+guides&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Find GCSE Revision Guides →</div>
   <div class="affiliate-card-desc">Browse GCSE revision guides on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 </aside>

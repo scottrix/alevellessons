@@ -11,6 +11,12 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://scottrix.github.io/gcserevise/topics/algorithms/CS3-searching-algorithms.html">
 <link rel="canonical" href="https://scottrix.github.io/gcserevise/topics/algorithms/CS3-searching-algorithms.html">
+<meta property="og:site_name" content="GCSE Revise">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Searching Algorithms">
+<meta name="twitter:description" content="Learn about linear search and binary search algorithms for GCSE Computer Science. Free revision notes with step-by-step workings.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Describe how a linear search works.", "acceptedAnswer": {"@type": "Answer", "text": "A linear search checks each item in a list one by one, starting from the first element, until the target is found or the end of the list is reached. It works on both sorted and unsorted data."}}, {"@type": "Question", "name": "Why must data be sorted before binary search can be used?", "acceptedAnswer": {"@type": "Answer", "text": "Binary search compares the target with the middle element and eliminates half the list based on whether the target is smaller or larger. This only works if the list is sorted, because the algorithm relies on the fact that all items before the middle are smaller and all items after are larger."}}, {"@type": "Question", "name": "Perform a binary search for the value 72 in the list [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]. Show each step.", "acceptedAnswer": {"@type": "Answer", "text": "Step 1: low=0, high=9, mid=4, list[4]=16. 16<72, so low=5. Step 2: low=5, high=9, mid=7, list[7]=56. 56<72, so low=8. Step 3: low=8, high=9, mid=8, list[8]=72. 72=72, found at index 8."}}, {"@type": "Question", "name": "A sorted list contains 256 items. What is the maximum number of comparisons needed by binary search?", "acceptedAnswer": {"@type": "Answer", "text": "log₂(256) = 8. Maximum 8 comparisons."}}, {"@type": "Question", "name": "Explain one advantage and one disadvantage of linear search compared to binary search.", "acceptedAnswer": {"@type": "Answer", "text": "Advantage: Linear search works on unsorted data, unlike binary search. Disadvantage: Linear search is much slower for large datasets - O(n) vs O(log n)."}}]}</script>
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -359,6 +365,36 @@ When comparing search algorithms, always state the time complexity of each (O(n)
 </section>
 
 
+
+<section class="section share-section">
+<h2>Share this page</h2>
+<div class="share-buttons">
+<a class="share-btn share-twitter" href="https://twitter.com/intent/tweet?url=https://scottrix.github.io/gcserevise/topics/algorithms/CS3-searching-algorithms.html&text=Searching Algorithms" target="_blank" rel="noopener" title="Share on Twitter">Twitter</a>
+<a class="share-btn share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://scottrix.github.io/gcserevise/topics/algorithms/CS3-searching-algorithms.html" target="_blank" rel="noopener" title="Share on Facebook">Facebook</a>
+<a class="share-btn share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https://scottrix.github.io/gcserevise/topics/algorithms/CS3-searching-algorithms.html" target="_blank" rel="noopener" title="Share on LinkedIn">LinkedIn</a>
+<a class="share-btn share-whatsapp" href="https://wa.me/?text=Searching Algorithms%20https://scottrix.github.io/gcserevise/topics/algorithms/CS3-searching-algorithms.html" target="_blank" rel="noopener" title="Share on WhatsApp">WhatsApp</a>
+<a class="share-btn share-copy" href="#" data-url="https://scottrix.github.io/gcserevise/topics/algorithms/CS3-searching-algorithms.html" title="Copy link">Copy Link</a>
+</div>
+</section>
+<section class="section related-topics">
+<h2>Related</h2>
+<div class="related-group"><h4>Related Topics</h4><ul>
+<li><a href="CS1-representing-algorithms.html">Representing Algorithms</a></li>
+<li><a href="CS2-efficiency-algorithms.html">Efficiency of Algorithms</a></li>
+<li><a href="CS4-sorting-algorithms.html">Sorting Algorithms</a></li>
+<li><a href="CS5-trace-tables.html">Trace Tables</a></li>
+</ul></div>
+<div class="related-group"><h4>Related Subjects</h4><ul>
+<li><a href="../../ancient-history.html">Ancient History</a></li>
+<li><a href="../../art-and-design.html">Art And Design</a></li>
+<li><a href="../../astronomy.html">Astronomy</a></li>
+<li><a href="../../biology.html">Biology</a></li>
+<li><a href="../../business.html">Business</a></li>
+<li><a href="../../chemistry.html">Chemistry</a></li>
+<li><a href="../../citizenship-studies.html">Citizenship Studies</a></li>
+<li><a href="../../classical-civilisation.html">Classical Civilisation</a></li>
+</ul></div>
+</section>
 <section class="section affiliate-cta-end">
 <h3>Ready to ace your GCSE Computer Science exams?</h3>
 <p>Get the best revision books and guides to boost your grades.</p>
@@ -404,25 +440,25 @@ document.getElementById('theme-toggle').textContent = '☀️';
 <a href="https://www.amazon.co.uk/s?k=GCSE+Computer+Science+books&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Browse GCSE Computer Science Books →</div>
   <div class="affiliate-card-desc">Browse GCSE Computer Science revision books on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 <a href="https://www.amazon.co.uk/s?k=GCSE+All+Boards+books&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Browse GCSE All Boards Books →</div>
   <div class="affiliate-card-desc">Browse GCSE All Boards revision books on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 <a href="https://www.amazon.co.uk/s?k=Searching+Algorithms+books&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Browse Searching Algorithms Books →</div>
   <div class="affiliate-card-desc">Browse Searching Algorithms books on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 <a href="https://www.amazon.co.uk/s?k=GCSE+revision+guides&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Find GCSE Revision Guides →</div>
   <div class="affiliate-card-desc">Browse GCSE revision guides on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 </aside>

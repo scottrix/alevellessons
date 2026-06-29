@@ -11,6 +11,12 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://scottrix.github.io/gcserevise/topics/data-representation/CS20-representing-images.html">
 <link rel="canonical" href="https://scottrix.github.io/gcserevise/topics/data-representation/CS20-representing-images.html">
+<meta property="og:site_name" content="GCSE Revise">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Representing Images">
+<meta name="twitter:description" content="Learn about bitmap images, pixels, resolution, colour depth and calculating image file sizes. Free GCSE Computer Science revision.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "An image has a resolution of 1920 x 1080 and a colour depth of 24 bits. Calculate the file size in megabytes.", "acceptedAnswer": {"@type": "Answer", "text": "File size = 1920 x 1080 x 24 = 49,766,400 bits = 6,220,800 bytes = 6,075 KB = 5.93 MB"}}, {"@type": "Question", "name": "What is the effect on file size if you double the width of an image but keep the height and colour depth the same?", "acceptedAnswer": {"@type": "Answer", "text": "The file size doubles, because total pixels = W x H. Doubling W means 2W x H = 2 x (W x H), so twice as many pixels."}}, {"@type": "Question", "name": "An image uses 8-bit colour depth. How many different colours can it represent?", "acceptedAnswer": {"@type": "Answer", "text": "28= 256 colours"}}, {"@type": "Question", "name": "Explain the trade-off between image quality and file size when increasing colour depth.", "acceptedAnswer": {"@type": "Answer", "text": "Increasing colour depth allows more colours to be represented, producing smoother gradients and more realistic images, but each pixel needs more bits, so the file size increases proportionally."}}, {"@type": "Question", "name": "A 500 x 400 image has a file size of 1,600,000 bits. What is the colour depth?", "acceptedAnswer": {"@type": "Answer", "text": "Colour depth = 1,600,000 / (500 x 400) = 1,600,000 / 200,000 = 8 bits per pixel"}}]}</script>
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -449,6 +455,38 @@ File size formula: width × height × colour depth (in bits), then convert to by
 </section>
 
 
+
+<section class="section share-section">
+<h2>Share this page</h2>
+<div class="share-buttons">
+<a class="share-btn share-twitter" href="https://twitter.com/intent/tweet?url=https://scottrix.github.io/gcserevise/topics/data-representation/CS20-representing-images.html&text=Representing Images" target="_blank" rel="noopener" title="Share on Twitter">Twitter</a>
+<a class="share-btn share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://scottrix.github.io/gcserevise/topics/data-representation/CS20-representing-images.html" target="_blank" rel="noopener" title="Share on Facebook">Facebook</a>
+<a class="share-btn share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https://scottrix.github.io/gcserevise/topics/data-representation/CS20-representing-images.html" target="_blank" rel="noopener" title="Share on LinkedIn">LinkedIn</a>
+<a class="share-btn share-whatsapp" href="https://wa.me/?text=Representing Images%20https://scottrix.github.io/gcserevise/topics/data-representation/CS20-representing-images.html" target="_blank" rel="noopener" title="Share on WhatsApp">WhatsApp</a>
+<a class="share-btn share-copy" href="#" data-url="https://scottrix.github.io/gcserevise/topics/data-representation/CS20-representing-images.html" title="Copy link">Copy Link</a>
+</div>
+</section>
+<section class="section related-topics">
+<h2>Related</h2>
+<div class="related-group"><h4>Related Topics</h4><ul>
+<li><a href="CS15-number-bases.html">Number Bases</a></li>
+<li><a href="CS16-converting-number-bases.html">Converting Number Bases</a></li>
+<li><a href="CS17-units-information.html">Units of Information</a></li>
+<li><a href="CS18-binary-arithmetic.html">Binary Arithmetic</a></li>
+<li><a href="CS19-character-encoding.html">Character Encoding</a></li>
+<li><a href="CS21-representing-sound.html">Representing Sound</a></li>
+</ul></div>
+<div class="related-group"><h4>Related Subjects</h4><ul>
+<li><a href="../../ancient-history.html">Ancient History</a></li>
+<li><a href="../../art-and-design.html">Art And Design</a></li>
+<li><a href="../../astronomy.html">Astronomy</a></li>
+<li><a href="../../biology.html">Biology</a></li>
+<li><a href="../../business.html">Business</a></li>
+<li><a href="../../chemistry.html">Chemistry</a></li>
+<li><a href="../../citizenship-studies.html">Citizenship Studies</a></li>
+<li><a href="../../classical-civilisation.html">Classical Civilisation</a></li>
+</ul></div>
+</section>
 <section class="section affiliate-cta-end">
 <h3>Ready to ace your GCSE Computer Science exams?</h3>
 <p>Get the best revision books and guides to boost your grades.</p>
@@ -494,25 +532,25 @@ document.getElementById('theme-toggle').textContent = '☀️';
 <a href="https://www.amazon.co.uk/s?k=GCSE+Computer+Science+books&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Browse GCSE Computer Science Books →</div>
   <div class="affiliate-card-desc">Browse GCSE Computer Science revision books on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 <a href="https://www.amazon.co.uk/s?k=GCSE+Data+Representation+books&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Browse GCSE Data Representation Books →</div>
   <div class="affiliate-card-desc">Browse GCSE Data Representation revision books on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 <a href="https://www.amazon.co.uk/s?k=Representing+Images+books&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Browse Representing Images Books →</div>
   <div class="affiliate-card-desc">Browse Representing Images books on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 <a href="https://www.amazon.co.uk/s?k=GCSE+revision+guides&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Find GCSE Revision Guides →</div>
   <div class="affiliate-card-desc">Browse GCSE revision guides on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 </aside>

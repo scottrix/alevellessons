@@ -11,6 +11,12 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://scottrix.github.io/gcserevise/topics/programming/CS10-data-structures.html">
 <link rel="canonical" href="https://scottrix.github.io/gcserevise/topics/programming/CS10-data-structures.html">
+<meta property="og:site_name" content="GCSE Revise">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Data Structures">
+<meta name="twitter:description" content="Learn about 1D arrays, 2D arrays, records and practical examples for GCSE Computer Science. Free revision notes.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Write pseudo-code to declare an array of 5 temperatures and output the third temperature.", "acceptedAnswer": {"@type": "Answer", "text": "temps ← [18.5, 20.3, 22.1, 19.8, 21.0]\nOUTPUT temps[2]    // Outputs 22.1 (third element, index 2)"}}, {"@type": "Question", "name": "Write pseudo-code that finds the sum of all elements in the array [10, 20, 30, 40, 50].", "acceptedAnswer": {"@type": "Answer", "text": "numbers ← [10, 20, 30, 40, 50]\ntotal ← 0\nFOR i ← 0 TO 4\n    total ← total + numbers[i]\nNEXT i\nOUTPUT total    // 150"}}, {"@type": "Question", "name": "A 2D array represents a 3x3 tic-tac-toe board. How would you access the centre square?", "acceptedAnswer": {"@type": "Answer", "text": "The centre square is at row 1, column 1:board[1][1]"}}, {"@type": "Question", "name": "Define a record called Car with fields for make (string), model (string), year (integer), and price (real).", "acceptedAnswer": {"@type": "Answer", "text": "TYPE Car\n    make AS STRING\n    model AS STRING\n    year AS INTEGER\n    price AS REAL\nENDTYPE"}}, {"@type": "Question", "name": "Write pseudo-code that iterates through an array of names and outputs only the names that start with \"A\".", "acceptedAnswer": {"@type": "Answer", "text": "names ← [\"Alice\", \"Bob\", \"Amy\", \"Charlie\", \"Anna\"]\nFOR i ← 0 TO 4\n    IF SUBSTRING(names[i], 0, 1) = \"A\" THEN\n        OUTPUT names[i]\n    ENDIF\nNEXT i"}}]}</script>
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -448,6 +454,38 @@ Arrays: same type, accessed by index. Records: different types, accessed by fiel
 </section>
 
 
+
+<section class="section share-section">
+<h2>Share this page</h2>
+<div class="share-buttons">
+<a class="share-btn share-twitter" href="https://twitter.com/intent/tweet?url=https://scottrix.github.io/gcserevise/topics/programming/CS10-data-structures.html&text=Data Structures" target="_blank" rel="noopener" title="Share on Twitter">Twitter</a>
+<a class="share-btn share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://scottrix.github.io/gcserevise/topics/programming/CS10-data-structures.html" target="_blank" rel="noopener" title="Share on Facebook">Facebook</a>
+<a class="share-btn share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https://scottrix.github.io/gcserevise/topics/programming/CS10-data-structures.html" target="_blank" rel="noopener" title="Share on LinkedIn">LinkedIn</a>
+<a class="share-btn share-whatsapp" href="https://wa.me/?text=Data Structures%20https://scottrix.github.io/gcserevise/topics/programming/CS10-data-structures.html" target="_blank" rel="noopener" title="Share on WhatsApp">WhatsApp</a>
+<a class="share-btn share-copy" href="#" data-url="https://scottrix.github.io/gcserevise/topics/programming/CS10-data-structures.html" title="Copy link">Copy Link</a>
+</div>
+</section>
+<section class="section related-topics">
+<h2>Related</h2>
+<div class="related-group"><h4>Related Topics</h4><ul>
+<li><a href="CS11-input-output-string-handling.html">Input, Output &amp;amp; String Handling</a></li>
+<li><a href="CS12-subroutines.html">Subroutines</a></li>
+<li><a href="CS13-robust-secure-programming.html">Robust &amp;amp; Secure Programming</a></li>
+<li><a href="CS14-random-number-generation.html">Random Number Generation</a></li>
+<li><a href="CS6-data-types.html">Data Types</a></li>
+<li><a href="CS7-programming-constructs.html">Programming Constructs</a></li>
+</ul></div>
+<div class="related-group"><h4>Related Subjects</h4><ul>
+<li><a href="../../ancient-history.html">Ancient History</a></li>
+<li><a href="../../art-and-design.html">Art And Design</a></li>
+<li><a href="../../astronomy.html">Astronomy</a></li>
+<li><a href="../../biology.html">Biology</a></li>
+<li><a href="../../business.html">Business</a></li>
+<li><a href="../../chemistry.html">Chemistry</a></li>
+<li><a href="../../citizenship-studies.html">Citizenship Studies</a></li>
+<li><a href="../../classical-civilisation.html">Classical Civilisation</a></li>
+</ul></div>
+</section>
 <section class="section affiliate-cta-end">
 <h3>Ready to ace your GCSE Computer Science exams?</h3>
 <p>Get the best revision books and guides to boost your grades.</p>
@@ -493,25 +531,25 @@ document.getElementById('theme-toggle').textContent = '☀️';
 <a href="https://www.amazon.co.uk/s?k=GCSE+Computer+Science+books&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Browse GCSE Computer Science Books →</div>
   <div class="affiliate-card-desc">Browse GCSE Computer Science revision books on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 <a href="https://www.amazon.co.uk/s?k=GCSE+All+Boards+books&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Browse GCSE All Boards Books →</div>
   <div class="affiliate-card-desc">Browse GCSE All Boards revision books on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 <a href="https://www.amazon.co.uk/s?k=Data+Structures+books&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Browse Data Structures Books →</div>
   <div class="affiliate-card-desc">Browse Data Structures books on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 <a href="https://www.amazon.co.uk/s?k=GCSE+revision+guides&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Find GCSE Revision Guides →</div>
   <div class="affiliate-card-desc">Browse GCSE revision guides on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 </aside>

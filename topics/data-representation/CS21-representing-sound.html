@@ -11,6 +11,12 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://scottrix.github.io/gcserevise/topics/data-representation/CS21-representing-sound.html">
 <link rel="canonical" href="https://scottrix.github.io/gcserevise/topics/data-representation/CS21-representing-sound.html">
+<meta property="og:site_name" content="GCSE Revise">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Representing Sound">
+<meta name="twitter:description" content="Learn about analogue to digital conversion, sampling rate, sample resolution and calculating sound file sizes. Free GCSE Computer Science revision.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Calculate the file size in MB of a 5-minute stereo recording sampled at 44,100 Hz with 16-bit resolution.", "acceptedAnswer": {"@type": "Answer", "text": "File size = 44,100 x 16 x 300 x 2 = 423,360,000 bits = 52,920,000 bytes = 50.47 MB"}}, {"@type": "Question", "name": "Explain why a higher sampling rate produces better quality sound.", "acceptedAnswer": {"@type": "Answer", "text": "A higher sampling rate takes more samples per second, which means the digital recording captures more detail of the original sound wave. This means the recreated sound is closer to the original, especially for higher frequency sounds."}}, {"@type": "Question", "name": "What is the minimum sampling rate needed to accurately record a sound with a maximum frequency of 15,000 Hz?", "acceptedAnswer": {"@type": "Answer", "text": "At least 30,000 Hz (2 x 15,000), according to Nyquist's Theorem."}}, {"@type": "Question", "name": "A 60-second mono recording at 22,050 Hz with 16-bit resolution produces a file of how many kilobytes?", "acceptedAnswer": {"@type": "Answer", "text": "File size = 22,050 x 16 x 60 x 1 = 21,168,000 bits = 2,646,000 bytes = 2,584 KB"}}, {"@type": "Question", "name": "What is the difference between sampling rate and sample resolution?", "acceptedAnswer": {"@type": "Answer", "text": "Sampling rate is how many samples are taken per second (measured in Hz). Sample resolution is how many bits are used to represent each sample (measured in bits). Rate affects time-based accuracy; resolution affects amplitude accuracy."}}]}</script>
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -414,6 +420,38 @@ Sound file size = sample rate × duration × bit depth × channels. Always check
 </section>
 
 
+
+<section class="section share-section">
+<h2>Share this page</h2>
+<div class="share-buttons">
+<a class="share-btn share-twitter" href="https://twitter.com/intent/tweet?url=https://scottrix.github.io/gcserevise/topics/data-representation/CS21-representing-sound.html&text=Representing Sound" target="_blank" rel="noopener" title="Share on Twitter">Twitter</a>
+<a class="share-btn share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://scottrix.github.io/gcserevise/topics/data-representation/CS21-representing-sound.html" target="_blank" rel="noopener" title="Share on Facebook">Facebook</a>
+<a class="share-btn share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https://scottrix.github.io/gcserevise/topics/data-representation/CS21-representing-sound.html" target="_blank" rel="noopener" title="Share on LinkedIn">LinkedIn</a>
+<a class="share-btn share-whatsapp" href="https://wa.me/?text=Representing Sound%20https://scottrix.github.io/gcserevise/topics/data-representation/CS21-representing-sound.html" target="_blank" rel="noopener" title="Share on WhatsApp">WhatsApp</a>
+<a class="share-btn share-copy" href="#" data-url="https://scottrix.github.io/gcserevise/topics/data-representation/CS21-representing-sound.html" title="Copy link">Copy Link</a>
+</div>
+</section>
+<section class="section related-topics">
+<h2>Related</h2>
+<div class="related-group"><h4>Related Topics</h4><ul>
+<li><a href="CS15-number-bases.html">Number Bases</a></li>
+<li><a href="CS16-converting-number-bases.html">Converting Number Bases</a></li>
+<li><a href="CS17-units-information.html">Units of Information</a></li>
+<li><a href="CS18-binary-arithmetic.html">Binary Arithmetic</a></li>
+<li><a href="CS19-character-encoding.html">Character Encoding</a></li>
+<li><a href="CS20-representing-images.html">Representing Images</a></li>
+</ul></div>
+<div class="related-group"><h4>Related Subjects</h4><ul>
+<li><a href="../../ancient-history.html">Ancient History</a></li>
+<li><a href="../../art-and-design.html">Art And Design</a></li>
+<li><a href="../../astronomy.html">Astronomy</a></li>
+<li><a href="../../biology.html">Biology</a></li>
+<li><a href="../../business.html">Business</a></li>
+<li><a href="../../chemistry.html">Chemistry</a></li>
+<li><a href="../../citizenship-studies.html">Citizenship Studies</a></li>
+<li><a href="../../classical-civilisation.html">Classical Civilisation</a></li>
+</ul></div>
+</section>
 <section class="section affiliate-cta-end">
 <h3>Ready to ace your GCSE Computer Science exams?</h3>
 <p>Get the best revision books and guides to boost your grades.</p>
@@ -459,25 +497,25 @@ document.getElementById('theme-toggle').textContent = '☀️';
 <a href="https://www.amazon.co.uk/s?k=GCSE+Computer+Science+books&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Browse GCSE Computer Science Books →</div>
   <div class="affiliate-card-desc">Browse GCSE Computer Science revision books on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 <a href="https://www.amazon.co.uk/s?k=GCSE+Data+Representation+books&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Browse GCSE Data Representation Books →</div>
   <div class="affiliate-card-desc">Browse GCSE Data Representation revision books on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 <a href="https://www.amazon.co.uk/s?k=Representing+Sound+books&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Browse Representing Sound Books →</div>
   <div class="affiliate-card-desc">Browse Representing Sound books on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 <a href="https://www.amazon.co.uk/s?k=GCSE+revision+guides&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Find GCSE Revision Guides →</div>
   <div class="affiliate-card-desc">Browse GCSE revision guides on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 </aside>

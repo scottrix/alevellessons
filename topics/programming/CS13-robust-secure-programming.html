@@ -11,6 +11,12 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://scottrix.github.io/gcserevise/topics/programming/CS13-robust-secure-programming.html">
 <link rel="canonical" href="https://scottrix.github.io/gcserevise/topics/programming/CS13-robust-secure-programming.html">
+<meta property="og:site_name" content="GCSE Revise">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Robust &amp;amp; Secure Programming">
+<meta name="twitter:description" content="Learn about validation, authentication, testing, test data types, errors and debugging for GCSE Computer Science. Free revision notes.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Name three types of validation check and give an example of each.", "acceptedAnswer": {"@type": "Answer", "text": "Range check: age must be 0-120. Length check: password must be at least 8 characters. Type check: quantity must be an integer. Presence check: name cannot be empty. Format check: email must contain @."}}, {"@type": "Question", "name": "A program asks for a test score between 0 and 100. Give examples of normal, boundary, and erroneous test data.", "acceptedAnswer": {"@type": "Answer", "text": "Normal: 75 (typical valid score). Boundary: 0, 100 (just within range), -1, 101 (just outside range). Erroneous: -50, 150, \"hello\" (clearly invalid)."}}, {"@type": "Question", "name": "Explain the difference between a syntax error and a logic error.", "acceptedAnswer": {"@type": "Answer", "text": "A syntax error is a mistake in the grammar of the programming language that prevents the program from running (e.g. missing ENDIF). A logic error is a mistake in the program's logic where it runs but produces incorrect results (e.g. dividing by the wrong number)."}}, {"@type": "Question", "name": "Write pseudo-code that validates a username to be between 3 and 20 characters.", "acceptedAnswer": {"@type": "Answer", "text": "REPEAT\n    INPUT \"Enter username (3-20 chars): \", username\n    IF LENGTH(username) < 3 OR LENGTH(username) > 20 THEN\n        OUTPUT \"Username must be between 3 and 20 characters\"\n    ENDIF\nUNTIL LENGTH(username) >= 3 AND LENGTH(username) <= 20"}}, {"@type": "Question", "name": "Describe two techniques for debugging a logic error.", "acceptedAnswer": {"@type": "Answer", "text": "1) Use a trace table to step through the program line by line, recording variable values and comparing with expected values. 2) Add temporary OUTPUT statements at key points to display variable values and check if they match expectations."}}]}</script>
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -429,6 +435,38 @@ Validation = is the data reasonable? (type check, range check, length check, pre
 </section>
 
 
+
+<section class="section share-section">
+<h2>Share this page</h2>
+<div class="share-buttons">
+<a class="share-btn share-twitter" href="https://twitter.com/intent/tweet?url=https://scottrix.github.io/gcserevise/topics/programming/CS13-robust-secure-programming.html&text=Robust &amp;amp; Secure Programming" target="_blank" rel="noopener" title="Share on Twitter">Twitter</a>
+<a class="share-btn share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://scottrix.github.io/gcserevise/topics/programming/CS13-robust-secure-programming.html" target="_blank" rel="noopener" title="Share on Facebook">Facebook</a>
+<a class="share-btn share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https://scottrix.github.io/gcserevise/topics/programming/CS13-robust-secure-programming.html" target="_blank" rel="noopener" title="Share on LinkedIn">LinkedIn</a>
+<a class="share-btn share-whatsapp" href="https://wa.me/?text=Robust &amp;amp; Secure Programming%20https://scottrix.github.io/gcserevise/topics/programming/CS13-robust-secure-programming.html" target="_blank" rel="noopener" title="Share on WhatsApp">WhatsApp</a>
+<a class="share-btn share-copy" href="#" data-url="https://scottrix.github.io/gcserevise/topics/programming/CS13-robust-secure-programming.html" title="Copy link">Copy Link</a>
+</div>
+</section>
+<section class="section related-topics">
+<h2>Related</h2>
+<div class="related-group"><h4>Related Topics</h4><ul>
+<li><a href="CS10-data-structures.html">Data Structures</a></li>
+<li><a href="CS11-input-output-string-handling.html">Input, Output &amp;amp; String Handling</a></li>
+<li><a href="CS12-subroutines.html">Subroutines</a></li>
+<li><a href="CS14-random-number-generation.html">Random Number Generation</a></li>
+<li><a href="CS6-data-types.html">Data Types</a></li>
+<li><a href="CS7-programming-constructs.html">Programming Constructs</a></li>
+</ul></div>
+<div class="related-group"><h4>Related Subjects</h4><ul>
+<li><a href="../../ancient-history.html">Ancient History</a></li>
+<li><a href="../../art-and-design.html">Art And Design</a></li>
+<li><a href="../../astronomy.html">Astronomy</a></li>
+<li><a href="../../biology.html">Biology</a></li>
+<li><a href="../../business.html">Business</a></li>
+<li><a href="../../chemistry.html">Chemistry</a></li>
+<li><a href="../../citizenship-studies.html">Citizenship Studies</a></li>
+<li><a href="../../classical-civilisation.html">Classical Civilisation</a></li>
+</ul></div>
+</section>
 <section class="section affiliate-cta-end">
 <h3>Ready to ace your GCSE Computer Science exams?</h3>
 <p>Get the best revision books and guides to boost your grades.</p>
@@ -474,25 +512,25 @@ document.getElementById('theme-toggle').textContent = '☀️';
 <a href="https://www.amazon.co.uk/s?k=GCSE+Computer+Science+books&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Browse GCSE Computer Science Books →</div>
   <div class="affiliate-card-desc">Browse GCSE Computer Science revision books on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 <a href="https://www.amazon.co.uk/s?k=GCSE+All+Boards+books&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Browse GCSE All Boards Books →</div>
   <div class="affiliate-card-desc">Browse GCSE All Boards revision books on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 <a href="https://www.amazon.co.uk/s?k=Robust+%26amp;+Secure+Programming+books&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Browse Robust &amp; Secure Programming Books →</div>
   <div class="affiliate-card-desc">Browse Robust &amp; Secure Programming books on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 <a href="https://www.amazon.co.uk/s?k=GCSE+revision+guides&tag=scottrix-21" class="affiliate-card" target="_blank" rel="nofollow noopener">
 <div class="affiliate-card-title">Find GCSE Revision Guides →</div>
   <div class="affiliate-card-desc">Browse GCSE revision guides on Amazon</div>
-  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt=""> amazon.co.uk</div>
+  <div class="affiliate-card-store"><img src="../../amazon-smile.svg" alt="Amazon"> amazon.co.uk</div>
 <div class="affiliate-card-urgency">Essential for 2026 exams</div>
 </a>
 </aside>
