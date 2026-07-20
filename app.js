@@ -143,9 +143,15 @@ function matchesTopic(topic, q) {
 }
 
 // Live search across the cached subjects + topics index.  Falls back to the
-// default grid when the query is empty.
+// default grid when the query is empty.  Also refreshes the autocomplete
+// dropdown when the search input is focused.
 function runSearch(query) {
   const grid = document.getElementById('subjects-grid');
+  // Always refresh the autocomplete first - it works even on pages without
+  // a subjects-grid (none today, but defensive).
+  if (autocompleteState.open || document.activeElement === document.getElementById('search')) {
+    renderAutocomplete(query);
+  }
   if (!grid) return;
   const q = (query || '').toLowerCase().trim();
 
@@ -193,7 +199,147 @@ function runSearch(query) {
 // Backwards-compatible button handler.
 function handleSearch() {
   const input = document.getElementById('search');
-  if (input) runSearch(input.value);
+  if (!input) return;
+  const q = input.value;
+  ensureSearchIndex().then(() => {
+    runSearch(q);
+    hideAutocomplete();
+    scrollToResults();
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Autocomplete (search box dropdown)
+// ---------------------------------------------------------------------------
+
+const AUTOCOMPLETE_LIMIT = 8;
+let autocompleteState = { items: [], highlighted: -1, open: false };
+
+function getAutocompleteEl() {
+  return document.getElementById('search-autocomplete');
+}
+
+// Build the flat list of items to show.  Top subjects first, then topics.
+function buildAutocompleteItems(query) {
+  if (!searchIndexLoaded || !searchIndex) return [];
+  const q = (query || '').toLowerCase().trim();
+  if (!q) return [];
+
+  const subjects = (searchIndex.subjects || []).filter(s => matchesSubject(s, q));
+  const topics = (searchIndex.topics || []).filter(t => matchesTopic(t, q));
+
+  const items = [];
+  subjects.slice(0, 3).forEach(s => items.push({
+    type: 'subject',
+    label: s.name,
+    context: s.category,
+    href: s.url,
+    id: null
+  }));
+  const remaining = AUTOCOMPLETE_LIMIT - items.length;
+  if (remaining > 0) {
+    topics.slice(0, remaining).forEach(t => items.push({
+      type: 'topic',
+      label: t.name,
+      context: t.subjectName + (t.strandName ? ' · ' + t.strandName : ''),
+      href: t.url,
+      id: t.id
+    }));
+  }
+  return items;
+}
+
+function renderAutocomplete(query) {
+  const el = getAutocompleteEl();
+  if (!el) return;
+  const items = buildAutocompleteItems(query);
+  autocompleteState.items = items;
+  autocompleteState.highlighted = -1;
+  updateActivedescendant();
+
+  if (items.length === 0) {
+    hideAutocomplete();
+    return;
+  }
+
+  el.innerHTML = items.map((item, i) => {
+    const idLabel = item.id
+      ? `<span class="topic-id-mini">${escapeHtml(item.id)}</span>`
+      : '';
+    const typeLabel = item.type === 'subject'
+      ? `${escapeHtml(item.context || '')} · Subject`
+      : `${escapeHtml(item.context || '')} · Topic`;
+    return `<a class="autocomplete-option" role="option" id="search-ac-opt-${i}" data-index="${i}" data-href="${escapeHtml(item.href)}" tabindex="-1">
+      <span class="opt-type">${typeLabel}</span>
+      <span class="opt-name">${idLabel}${escapeHtml(item.label)}</span>
+    </a>`;
+  }).join('');
+
+  el.hidden = false;
+  autocompleteState.open = true;
+  const input = document.getElementById('search');
+  if (input) input.setAttribute('aria-expanded', 'true');
+
+  el.querySelectorAll('.autocomplete-option').forEach(opt => {
+    opt.addEventListener('mousedown', e => {
+      // mousedown fires before the input's blur, so we can navigate freely.
+      e.preventDefault();
+      const href = opt.getAttribute('data-href');
+      if (href) window.location.href = href;
+    });
+  });
+}
+
+function hideAutocomplete() {
+  const el = getAutocompleteEl();
+  if (el) { el.hidden = true; el.innerHTML = ''; }
+  autocompleteState.items = [];
+  autocompleteState.highlighted = -1;
+  autocompleteState.open = false;
+  const input = document.getElementById('search');
+  if (input) {
+    input.setAttribute('aria-expanded', 'false');
+    input.removeAttribute('aria-activedescendant');
+  }
+}
+
+function highlightAutocomplete(index) {
+  const el = getAutocompleteEl();
+  if (!el || autocompleteState.items.length === 0) return;
+  if (index < -1) index = -1;
+  if (index >= autocompleteState.items.length) index = autocompleteState.items.length - 1;
+
+  const opts = el.querySelectorAll('.autocomplete-option');
+  opts.forEach((opt, i) => opt.classList.toggle('active', i === index));
+  if (index >= 0 && opts[index]) {
+    opts[index].scrollIntoView({ block: 'nearest' });
+  }
+  autocompleteState.highlighted = index;
+  updateActivedescendant();
+}
+
+function updateActivedescendant() {
+  const input = document.getElementById('search');
+  if (!input) return;
+  if (autocompleteState.highlighted >= 0) {
+    input.setAttribute('aria-activedescendant', 'search-ac-opt-' + autocompleteState.highlighted);
+  } else {
+    input.removeAttribute('aria-activedescendant');
+  }
+}
+
+function navigateHighlighted() {
+  const item = autocompleteState.items[autocompleteState.highlighted];
+  if (item && item.href) {
+    window.location.href = item.href;
+    return true;
+  }
+  return false;
+}
+
+function scrollToResults() {
+  const subjectsSection = document.getElementById('subjects');
+  if (subjectsSection) subjectsSection.scrollIntoView({ behavior: 'smooth' });
 }
 
 // ---------------------------------------------------------------------------
@@ -317,19 +463,59 @@ document.addEventListener('DOMContentLoaded', function () {
   if (searchInput) {
     // Start pre-fetching the search index as soon as the user focuses the
     // box so it is ready by the time they type the first character.
-    searchInput.addEventListener('focus', () => { ensureSearchIndex(); });
+    searchInput.addEventListener('focus', () => {
+      ensureSearchIndex().then(() => {
+        // If there's already a query (e.g. refocusing) re-render the dropdown.
+        if (searchInput.value.trim()) renderAutocomplete(searchInput.value);
+      });
+    });
 
     searchInput.addEventListener('input', () => {
       runSearch(searchInput.value);
     });
 
-    // Enter: make sure the search renders (live filtering already does, but
-    // Enter also shouldn't accidentally navigate the page).
+    // Keyboard: arrow keys move highlight, Enter navigates or scrolls to grid,
+    // Escape closes the dropdown.  Tab falls through to the browser.
     searchInput.addEventListener('keydown', e => {
-      if (e.key === 'Enter') {
+      if (e.key === 'ArrowDown') {
         e.preventDefault();
-        ensureSearchIndex().then(() => runSearch(searchInput.value));
+        if (!autocompleteState.open) renderAutocomplete(searchInput.value);
+        highlightAutocomplete(autocompleteState.highlighted + 1);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (autocompleteState.open) {
+          highlightAutocomplete(autocompleteState.highlighted - 1);
+        }
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        // If an autocomplete option is highlighted, navigate straight to it.
+        if (autocompleteState.highlighted >= 0 && navigateHighlighted()) return;
+        // Otherwise: render the grid and scroll down to it.
+        ensureSearchIndex().then(() => {
+          runSearch(searchInput.value);
+          hideAutocomplete();
+          scrollToResults();
+        });
+      } else if (e.key === 'Escape') {
+        // Escape closes the dropdown.  Browsers will also clear <input type="search">.
+        hideAutocomplete();
       }
+    });
+
+    // Blur: close the dropdown.  Use a small timeout so a mousedown on a
+    // suggestion has time to fire and navigate before the dropdown disappears.
+    searchInput.addEventListener('blur', () => {
+      setTimeout(() => hideAutocomplete(), 150);
+    });
+  }
+
+  // Search button: also scroll to the grid after the search runs.
+  const searchBtn = document.querySelector('.search-box button');
+  if (searchBtn) {
+    searchBtn.addEventListener('click', () => {
+      // handleSearch() runs via the inline onclick; this listener just adds
+      // the scroll-on-click behaviour.  Delay so the grid has rendered.
+      setTimeout(() => scrollToResults(), 80);
     });
   }
 });

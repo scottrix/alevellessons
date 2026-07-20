@@ -70,8 +70,9 @@
             <h1>Free GCSE Revision Notes</h1>
             <p class="hero-subtitle">Comprehensive revision materials for all subjects and exam boards</p>
             <div class="search-box">
-                <input type="search" id="search" placeholder="Search for a subject or topic...">
+                <input type="search" id="search" placeholder="Search for a subject or topic..." autocomplete="off" role="combobox" aria-expanded="false" aria-controls="search-autocomplete" aria-autocomplete="list">
                 <button onclick="handleSearch()">Search</button>
+                <div id="search-autocomplete" class="autocomplete" role="listbox" hidden></div>
             </div>
             <div class="quick-stats">
                 <div class="stat">
