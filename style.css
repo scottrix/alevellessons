@@ -387,6 +387,40 @@ body {
     margin-top: 0.5rem;
 }
 
+/* Search results (subjects grid) */
+.search-section-header {
+    grid-column: 1 / -1;
+    margin: 1.5rem 0 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.search-section-header:first-child {
+    margin-top: 0;
+}
+
+.subject-card.topic-result {
+    border-left: 3px solid var(--accent);
+}
+
+.topic-id-mini {
+    display: inline-block;
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    background: var(--bg-secondary);
+    color: var(--accent);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    margin-right: 0.4rem;
+    vertical-align: middle;
+}
+
 /* About */
 .about {
     max-width: 1200px;
