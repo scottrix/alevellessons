@@ -6,11 +6,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://scottrix.github.io/gcserevise/privacy.html</loc>
-    <lastmod>2026-08-10</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
     <loc>https://scottrix.github.io/gcserevise/ancient-history.html</loc>
     <lastmod>2026-08-10</lastmod>
     <priority>0.8</priority>
@@ -27,7 +22,7 @@
   </url>
   <url>
     <loc>https://scottrix.github.io/gcserevise/biology.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-08-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -37,7 +32,7 @@
   </url>
   <url>
     <loc>https://scottrix.github.io/gcserevise/chemistry.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-08-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -92,12 +87,12 @@
   </url>
   <url>
     <loc>https://scottrix.github.io/gcserevise/english-language.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-08-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://scottrix.github.io/gcserevise/english-literature.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-08-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -117,7 +112,7 @@
   </url>
   <url>
     <loc>https://scottrix.github.io/gcserevise/geography.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-08-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -162,12 +157,12 @@
   </url>
   <url>
     <loc>https://scottrix.github.io/gcserevise/pe.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-08-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://scottrix.github.io/gcserevise/physics.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-08-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -187,7 +182,7 @@
   </url>
   <url>
     <loc>https://scottrix.github.io/gcserevise/spanish.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-08-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -4142,7 +4137,7 @@
   </url>
   <url>
     <loc>https://scottrix.github.io/gcserevise/topics/movement-analysis/PE11-movement-analysis-sport.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-08-11</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -6196,26 +6191,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://scottrix.github.io/gcserevise/topics/writing/W1-using-quotations.html</loc>
-    <lastmod>2026-08-10</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://scottrix.github.io/gcserevise/topics/writing/W2-essay-structure.html</loc>
-    <lastmod>2026-08-10</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://scottrix.github.io/gcserevise/topics/writing/W3-critical-style.html</loc>
-    <lastmod>2026-08-10</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://scottrix.github.io/gcserevise/topics/writing/W4-subject-terminology.html</loc>
-    <lastmod>2026-08-10</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://scottrix.github.io/gcserevise/topics/writing-creative/WC1-descriptive-writing.html</loc>
     <lastmod>2026-08-10</lastmod>
     <priority>0.7</priority>
@@ -6269,5 +6244,30 @@
     <loc>https://scottrix.github.io/gcserevise/topics/writing-transactional/WT6-audience-purpose.html</loc>
     <lastmod>2026-08-10</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scottrix.github.io/gcserevise/topics/writing/W1-using-quotations.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scottrix.github.io/gcserevise/topics/writing/W2-essay-structure.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scottrix.github.io/gcserevise/topics/writing/W3-critical-style.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scottrix.github.io/gcserevise/topics/writing/W4-subject-terminology.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scottrix.github.io/gcserevise/privacy.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <priority>0.3</priority>
   </url>
 </urlset>
