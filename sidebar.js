@@ -41,23 +41,28 @@ return '<li><a href="' + s.id + '.html"' + cls + '>' + s.name + '</a></li>';
 } else if (isTopicPage) {
 var segs = path.split('/');
 var subjectSlug = '';
+// Extract a subject slug (e.g. 'combined-science') from a link href.
+// Strict: only match subject.html links, skipping home links (./ ../../),
+// fragment links (#subjects), and index links.
+function subjectFromHref(href) {
+if (!href) return '';
+if (href.indexOf('#') !== -1) return '';
+if (href.indexOf('index') !== -1) return '';
+if (/(?:^|\/)\.?$/.test(href)) return '';
+var m = /([a-z][a-z0-9-]+)\.html$/.exec(href);
+return m ? m[1] : '';
+}
 var bcLinks = document.querySelectorAll('.breadcrumb a');
 for (var i = 0; i < bcLinks.length; i++) {
-var href = bcLinks[i].getAttribute('href') || '';
-if (href.indexOf('index.html') === -1 && href.indexOf('#') === -1) {
-subjectSlug = href.replace(/^..\/..\/?/, '').replace(/\.html$/, '');
-break;
-}
+subjectSlug = subjectFromHref(bcLinks[i].getAttribute('href') || '');
+if (subjectSlug) break;
 }
 // Fallback: extract subject slug from the nav link in the header
 if (!subjectSlug) {
 var navLinks = document.querySelectorAll('header .nav a');
 for (var j = 0; j < navLinks.length; j++) {
-var nhref = navLinks[j].getAttribute('href') || '';
-if (nhref.indexOf('../../') === 0 && nhref.indexOf('index') === -1) {
-subjectSlug = nhref.replace(/^..\/..\/?/, '').replace(/\.html$/, '');
-break;
-}
+subjectSlug = subjectFromHref(navLinks[j].getAttribute('href') || '');
+if (subjectSlug) break;
 }
 }
 var prefix = '../../';
