@@ -1,0 +1,56 @@
+{
+ "subject": "biology",
+ "topic": "ecology-and-ecosystems",
+ "topicName": "Ecology and Ecosystems",
+ "version": 1,
+ "steps": [
+  {
+   "id": "ecology-and-ecosystems-s1",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "GPP = total photosynthesis; NPP = GPP - R (respiration); Efficiency = energy transferred/total available x100% (typically 10%); Pyramids: energy always upright; biomass can be inverted"
+  },
+  {
+   "id": "ecology-and-ecosystems-s2",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "Carbon: photosynthesis, respiration, combustion, decomposition, ocean uptake; Nitrogen: fixation (lightning, bacteria), nitrification (ammonia->nitrite->nitrate), assimilation, denitrification"
+  },
+  {
+   "id": "ecology-and-ecosystems-s3",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "Growth curves: lag, log, stationary, death; Carrying capacity K; r/K selection; Predator-prey: Lotka-Volterra cycles"
+  },
+  {
+   "id": "ecology-and-ecosystems-s4",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "Succession: pioneer -> intermediate -> climax; each stage modifies environment for next; Deflected succession: human interference"
+  },
+  {
+   "id": "ecology-and-ecosystems-ex",
+   "kind": "example",
+   "title": "Worked example",
+   "body": "Q: Explain why only ~10% of energy transfers between trophic levels --- Solution: Energy lost as: heat (respiration), faeces (undigested), urine (excretion), uneaten parts. Only energy in consumed biomass available to next level. 2nd law of thermodynamics: entropy increases"
+  },
+  {
+   "id": "ecology-and-ecosystems-try",
+   "kind": "try",
+   "title": "Try it yourself",
+   "body": "Define GPP and NPP | Describe nitrogen fixation | Draw logistic growth curve, label K and r"
+  },
+  {
+   "id": "ecology-and-ecosystems-check",
+   "kind": "check",
+   "title": "Lesson plan",
+   "body": "Starter (5 min): Recall prior knowledge of ecology and ecosystems with quick questions. Teaching (15 min): Work through each of the learning objectives, explaining principles step by step. Key points review (5 min): Revisit the key points together, confirming understanding. Worked example (10 min): Model the example question: Explain why only ~10% of energy transfers between trophic levels. Solution: Energy lost as: heat (respiration), faeces (undigested), urine (excretion), uneaten parts. Only energy in consumed biomass available to next level. 2nd law of thermodynamics: entropy increases Practice (10 min): Students attempt the practice questions independently; circulate and support. Plenary (5 min): Review answers and address misconceptions."
+  },
+  {
+   "id": "ecology-and-ecosystems-hw",
+   "kind": "review",
+   "title": "Homework",
+   "body": "Define GPP and NPP Describe nitrogen fixation Draw logistic growth curve, label K and r What is a climax community? Explain ocean acidification mechanism"
+  }
+ ]
+}

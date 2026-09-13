@@ -1,0 +1,56 @@
+{
+ "subject": "history",
+ "topic": "depth-study:-a-period-in-detail",
+ "topicName": "Depth Study: a Period in Detail",
+ "version": 1,
+ "steps": [
+  {
+   "id": "depth-study-a-period-in-detail-s1",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "Chronology: precise dates, sequence, duration, contemporaneity"
+  },
+  {
+   "id": "depth-study-a-period-in-detail-s2",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "Key figures: biography, ideology, agency, constraints, legacy, historiographical reputation"
+  },
+  {
+   "id": "depth-study-a-period-in-detail-s3",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "Significance: immediate impact, long-term consequences, symbolic importance, scale/depth"
+  },
+  {
+   "id": "depth-study-a-period-in-detail-s4",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "Nuanced argument: avoid determinism; weigh multiple factors; qualify judgements"
+  },
+  {
+   "id": "depth-study-a-period-in-detail-ex",
+   "kind": "example",
+   "title": "Worked example",
+   "body": "Q: Assess the significance of Lenin in the Bolshevik consolidation of power 1917-1924 --- Solution: Crucial: April Theses redirected party; Oct Revolution leadership; Treaty of Brest-Litovsk (pragmatism); War Communism/NEP (ideological flexibility); suppressed opposition (Cheka, ban on factions). But: structural factors (war, economic collapse, peasant resistance) also critical. Historiography: Service (central) vs Figes (contingent)"
+  },
+  {
+   "id": "depth-study-a-period-in-detail-try",
+   "kind": "try",
+   "title": "Try it yourself",
+   "body": "Create timeline of key events 1917-1924 | Evaluate role of Trotsky vs Lenin | Debate: was NEP betrayal or necessity?"
+  },
+  {
+   "id": "depth-study-a-period-in-detail-check",
+   "kind": "check",
+   "title": "Lesson plan",
+   "body": "Starter (5 min): Recall prior knowledge of depth study: a period in detail with quick questions. Teaching (15 min): Work through each of the learning objectives, explaining principles step by step. Key points review (5 min): Revisit the key points together, confirming understanding. Worked example (10 min): Model the example question: Assess the significance of Lenin in the Bolshevik consolidation of power 1917-1924. Solution: Crucial: April Theses redirected party; Oct Revolution leadership; Treaty of Brest-Litovsk (pragmatism); War Communism/NEP (ideological flexibility); suppressed opposition (Cheka, ban on factions). But: structural factors (war, economic collapse, peasant resistance) also critical. Historiography: Service (central) vs Figes (contingent) Practice (10 min): Students att"
+  },
+  {
+   "id": "depth-study-a-period-in-detail-hw",
+   "kind": "review",
+   "title": "Homework",
+   "body": "Create timeline of key events 1917-1924 Evaluate role of Trotsky vs Lenin Debate: was NEP betrayal or necessity? Analyse impact of Kronstadt rebellion Compare Soviet vs Western interpretations"
+  }
+ ]
+}

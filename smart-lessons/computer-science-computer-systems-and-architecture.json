@@ -1,0 +1,56 @@
+{
+ "subject": "computer-science",
+ "topic": "computer-systems-and-architecture",
+ "topicName": "Computer Systems and Architecture",
+ "version": 1,
+ "steps": [
+  {
+   "id": "computer-systems-and-architecture-s1",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "CPU: ALU (arithmetic/logic), CU (control signals), Registers: PC (next instruction), ACC (results), MAR (address), MDR (data), CIR (instruction), SR (flags)"
+  },
+  {
+   "id": "computer-systems-and-architecture-s2",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "FDE: Fetch (PC to MAR, memory to MDR/CIR, PC++), Decode (CU interprets CIR), Execute (ALU/control)"
+  },
+  {
+   "id": "computer-systems-and-architecture-s3",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "Pipelining: fetch/decode/execute overlap; hazards (data, control, structural)"
+  },
+  {
+   "id": "computer-systems-and-architecture-s4",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "Memory: Registers > L1 cache > L2 > L3 > RAM > SSD > HDD; Virtual memory: paging, page table, TLB, page fault"
+  },
+  {
+   "id": "computer-systems-and-architecture-ex",
+   "kind": "example",
+   "title": "Worked example",
+   "body": "Q: A program has 20 percent serial code. Max speedup on 4 cores? --- Solution: Amdahl: speedup = 1/((1-0.8) + 0.8/4) = 1/(0.2 + 0.2) = 2.5x. Even infinite cores: 1/0.2 = 5x"
+  },
+  {
+   "id": "computer-systems-and-architecture-try",
+   "kind": "try",
+   "title": "Try it yourself",
+   "body": "List registers and their purposes | Draw FDE cycle diagram | Explain cache hit/miss"
+  },
+  {
+   "id": "computer-systems-and-architecture-check",
+   "kind": "check",
+   "title": "Lesson plan",
+   "body": "Starter (5 min): Recall prior knowledge of computer systems and architecture with quick questions. Teaching (15 min): Work through each of the learning objectives, explaining principles step by step. Key points review (5 min): Revisit the key points together, confirming understanding. Worked example (10 min): Model the example question: A program has 20 percent serial code. Max speedup on 4 cores?. Solution: Amdahl: speedup = 1/((1-0.8) + 0.8/4) = 1/(0.2 + 0.2) = 2.5x. Even infinite cores: 1/0.2 = 5x Practice (10 min): Students attempt the practice questions independently; circulate and support. Plenary (5 min): Review answers and address misconceptions."
+  },
+  {
+   "id": "computer-systems-and-architecture-hw",
+   "kind": "review",
+   "title": "Homework",
+   "body": "List registers and their purposes Draw FDE cycle diagram Explain cache hit/miss Compare CISC vs RISC Calculate speedup: 30 percent serial, 8 cores"
+  }
+ ]
+}

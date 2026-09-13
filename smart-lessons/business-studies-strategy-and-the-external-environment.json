@@ -1,0 +1,56 @@
+{
+ "subject": "business-studies",
+ "topic": "strategy-and-the-external-environment",
+ "topicName": "Strategy and the External Environment",
+ "version": 1,
+ "steps": [
+  {
+   "id": "strategy-and-the-external-environment-s1",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "SWOT: internal S/W, external O/T; PESTEL: Political, Economic, Social, Technological, Environmental, Legal"
+  },
+  {
+   "id": "strategy-and-the-external-environment-s2",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "Porter 5 Forces: rivalry, new entrants, substitutes, buyer power, supplier power"
+  },
+  {
+   "id": "strategy-and-the-external-environment-s3",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "Core competences: valuable, rare, inimitable, non-substitutable (VRIN)"
+  },
+  {
+   "id": "strategy-and-the-external-environment-s4",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "Boston Matrix: Stars (high share, high growth), Cash Cows (high share, low growth), Question Marks (low share, high growth), Dogs (low share, low growth)"
+  },
+  {
+   "id": "strategy-and-the-external-environment-ex",
+   "kind": "example",
+   "title": "Worked example",
+   "body": "Q: Use Porter's Five Forces to analyse the UK supermarket industry --- Solution: Rivalry: high (Tesco, Sainsbury, Asda, Morrisons, Aldi, Lidl -- price wars). New entrants: low (high capital, established supply chains, brand loyalty). Substitutes: medium (convenience stores, online, markets). Buyer power: high (price-sensitive, low switching cost, loyalty cards). Supplier power: medium (large buyers, but branded goods have power). Overall: low profitability"
+  },
+  {
+   "id": "strategy-and-the-external-environment-try",
+   "kind": "try",
+   "title": "Try it yourself",
+   "body": "Apply PESTEL to electric vehicle industry | Place Apple products in Boston Matrix | Compare cost leadership vs differentiation for Ryanair vs BA"
+  },
+  {
+   "id": "strategy-and-the-external-environment-check",
+   "kind": "check",
+   "title": "Lesson plan",
+   "body": "Starter (5 min): Recall prior knowledge of strategy and the external environment with quick questions. Teaching (15 min): Work through each of the learning objectives, explaining principles step by step. Key points review (5 min): Revisit the key points together, confirming understanding. Worked example (10 min): Model the example question: Use Porter's Five Forces to analyse the UK supermarket industry. Solution: Rivalry: high (Tesco, Sainsbury, Asda, Morrisons, Aldi, Lidl -- price wars). New entrants: low (high capital, established supply chains, brand loyalty). Substitutes: medium (convenience stores, online, markets). Buyer power: high (price-sensitive, low switching cost, loyalty cards). Supplier power: medium (large buyers, but branded goods have power). Overall: low profitability Pr"
+  },
+  {
+   "id": "strategy-and-the-external-environment-hw",
+   "kind": "review",
+   "title": "Homework",
+   "body": "Apply PESTEL to electric vehicle industry Place Apple products in Boston Matrix Compare cost leadership vs differentiation for Ryanair vs BA Evaluate M&A vs organic growth for tech startup Apply Kotter to digital transformation"
+  }
+ ]
+}

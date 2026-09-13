@@ -1,0 +1,56 @@
+{
+ "subject": "mathematics",
+ "topic": "coordinate-geometry",
+ "topicName": "Coordinate Geometry",
+ "version": 1,
+ "steps": [
+  {
+   "id": "coordinate-geometry-s1",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "Gradient m = (y₂ - y₁)/(x₂ - x₁)"
+  },
+  {
+   "id": "coordinate-geometry-s2",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "Line equations: y - y₁ = m(x - x₁) or y = mx + c"
+  },
+  {
+   "id": "coordinate-geometry-s3",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "Distance d = sqrt((x₂ - x₁)^2 + (y₂ - y₁)^2)"
+  },
+  {
+   "id": "coordinate-geometry-s4",
+   "kind": "learn",
+   "title": "Key Fact",
+   "body": "Midpoint M = ((x₁ + x₂)/2, (y₁ + y₂)/2)"
+  },
+  {
+   "id": "coordinate-geometry-ex",
+   "kind": "example",
+   "title": "Worked example",
+   "body": "Q: Find the equation of the circle with diameter endpoints A(1,2) and B(5,6). Find the tangent at A. --- Solution: Centre = midpoint of AB = (3,4). Radius = half of AB = ½sqrt((5-1)^2+(6-2)^2) = ½sqrt32 = 2sqrt2. Circle: (x-3)^2+(y-4)^2=8. Gradient of radius OA = (2-4)/(1-3)=1. Tangent gradient = -1. Tangent at A: y-2 = -1(x-1) -> y = -x+3"
+  },
+  {
+   "id": "coordinate-geometry-try",
+   "kind": "try",
+   "title": "Try it yourself",
+   "body": "Find the line through (-2,3) perpendicular to 2x + 3y = 6 | Find intersection of y = 2x - 1 and 3x + y = 7 | Circle C: (x-2)^2 + (y+1)^2 = 25. Find tangent at (5,3)"
+  },
+  {
+   "id": "coordinate-geometry-check",
+   "kind": "check",
+   "title": "Lesson plan",
+   "body": "Starter (5 min): Recall prior knowledge of coordinate geometry with quick questions. Teaching (15 min): Work through each of the learning objectives, explaining principles step by step. Key points review (5 min): Revisit the key points together, confirming understanding. Worked example (10 min): Model the example question: Find the equation of the circle with diameter endpoints A(1,2) and B(5,6). Find the tangent at A.. Solution: Centre = midpoint of AB = (3,4). Radius = half of AB = ½sqrt((5-1)^2+(6-2)^2) = ½sqrt32 = 2sqrt2. Circle: (x-3)^2+(y-4)^2=8. Gradient of radius OA = (2-4)/(1-3)=1. Tangent gradient = -1. Tangent at A: y-2 = -1(x-1) -> y = -x+3 Practice (10 min): Students attempt the practice questions independently; circulate and support. Plenary (5 min): Review answers and addres"
+  },
+  {
+   "id": "coordinate-geometry-hw",
+   "kind": "review",
+   "title": "Homework",
+   "body": "Find the line through (-2,3) perpendicular to 2x + 3y = 6 Find intersection of y = 2x - 1 and 3x + y = 7 Circle C: (x-2)^2 + (y+1)^2 = 25. Find tangent at (5,3) Points A(1,1), B(4,5), C(6,2). Show triangle ABC is right-angled Find the locus of points equidistant from (2,3) and the line y = -1"
+  }
+ ]
+}
