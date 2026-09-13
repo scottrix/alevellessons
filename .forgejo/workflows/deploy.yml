@@ -1,0 +1,16 @@
+name: Deploy alevellessons
+on:
+  push:
+    branches:
+      - pages
+jobs:
+  deploy:
+    runs-on: codeberg-small
+    steps:
+      - uses: actions/checkout@v4
+      - uses: https://codeberg.org/git-pages/action@v2
+        with:
+          site: https://www.scottrix.co.uk/
+          path: alevellessons/
+          token: ${{ forge.token }}
+          source: .
