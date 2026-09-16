@@ -582,24 +582,24 @@ function initTopicTargetTests() {
 
   const path = window.location.pathname;
   const match = path.match(/\/topics\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)\.html$/);
-  const matchNoTier = path.match(/\/topics\/([^/]+)\/([^/]+)\/(.+)\.html$/);
+  const matchNoTier = path.match(/\/topics\/([^/]+)\/([^/]+)\.html$/);
 
   let subject, board, tier, topicFile;
   if (match) {
     [, subject, board, tier, topicFile] = match;
   } else if (matchNoTier) {
-    [, subject, board, topicFile] = matchNoTier;
-    tier = '';
+    [, subject, topicFile] = matchNoTier;
+    board = ''; tier = '';
   } else {
     return;
   }
 
   const topic = topicFile.replace('.html', '');
   const tierPart = tier ? '-' + tier.toLowerCase() : '';
-  const testUrl = `/alevellessons/target-tests/${subject}-${board}${tierPart}-${topic}.json`;
+  const testUrl = `/alevelrevise/target-tests/${subject}-${topic}.json`;
 
   const renderer = new TargetTestsRenderer('#target-tests-container', { showTimer: true });
-  renderer.loadTests(testUrl, `${subject}-${board}${tierPart}-${topic}`).then(tests => {
+  renderer.loadTests(testUrl, `${subject}-${topic}`).then(tests => {
     if (tests.length > 0) {
       renderer.render();
     } else {
