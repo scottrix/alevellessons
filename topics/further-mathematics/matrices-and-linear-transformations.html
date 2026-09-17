@@ -10,8 +10,8 @@
 <meta property="og:title" content="Matrices and Linear Transformations - A-Level Further Mathematics">
 <meta property="og:description" content="2D/3D matrix transformations, determinants, inverses, eigenvalues, eigenvectors, systems of equations. Complete revision notes for A-Level Further Mathematics.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://www.scottrix.co.uk/alevelrevise/topics/further-mathematics/matrices-and-linear-transformations.html">
-<link rel="canonical" href="https://www.scottrix.co.uk/alevelrevise/topics/further-mathematics/matrices-and-linear-transformations.html">
+<meta property="og:url" content="https://www.scottrix.co.uk/alevellessons/topics/further-mathematics/matrices-and-linear-transformations.html">
+<link rel="canonical" href="https://www.scottrix.co.uk/alevellessons/topics/further-mathematics/matrices-and-linear-transformations.html">
 <meta property="og:site_name" content="A-Level Revise">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
@@ -27,6 +27,7 @@
 <nav class="nav">
 <a href="../../index.html#subjects">Subjects</a>
 <a href="../../further-mathematics.html">Further Mathematics</a>
+<a href="../../../alevellessons/topics/further-mathematics/matrices-and-linear-transformations.html" class="nav-lesson">🎓 Full lesson on Smart Lessons &rarr;</a>
 </nav>
 <button id="theme-toggle" class="theme-btn">🌙</button>
 </div>
@@ -98,6 +99,10 @@
 <h2>📋 Key Definitions and Core Concepts</h2>
 <div class="key-point"><strong>Determinant:</strong> Scalar scale factor for area/volume. det(A) = ad - bc for 2x2.</div>
 <div class="key-point"><strong>Eigenvector:</strong> Non-zero vector v satisfying Av = λv for eigenvalue λ.</div>
+<div class="key-point"><strong>Matrix of a Linear Transformation:</strong> A 2x2 matrix M maps position vectors under a linear transformation; the columns of M are the images of the unit vectors i and j.</div>
+<div class="key-point"><strong>Inverse Matrix:</strong> A⁻¹ reverses the transformation, with A⁻¹ = adj(A)/det(A); it exists only when det(A) ≠ 0 (a singular matrix has no inverse).</div>
+<div class="key-point"><strong>Combined Transformations:</strong> Applying transformation M then N is represented by the matrix product NM — order matters, since NM ≠ MN in general.</div>
+<div class="key-point"><strong>Invariant Points:</strong> Points unchanged by a transformation satisfy Mx = x; every point on the mirror line is invariant under a reflection, and the origin is invariant under any linear transformation.</div>
 </section>
 
 <section class="section">
@@ -144,6 +149,24 @@ Eigenvalues: λ₁ = 2, λ₂ = 5.</pre>
     </div>
   </details>
 </div>
+<div class="question">
+  <p><strong>Q3:</strong> Find the 2x2 matrix representing a rotation of 45&#176; anticlockwise about the origin followed by a reflection in the x-axis, and describe the single transformation this represents.</p>
+  <details style="margin-top: 0.5rem;">
+    <summary style="cursor: pointer; color: var(--accent); font-weight: 600;">Show Model Answer</summary>
+    <div style="margin-top: 0.5rem; padding: 0.75rem; background: var(--bg-secondary); border-left: 3px solid var(--success); border-radius: 4px;">
+      <p><strong>Answer:</strong> Rotation matrix R = [[cos 45&#176;, -sin 45&#176;], [sin 45&#176;, cos 45&#176;]] = [[&#8730;2/2, -&#8730;2/2], [&#8730;2/2, &#8730;2/2]]. Reflection in the x-axis: F = [[1, 0], [0, -1]]. Combined transformation = FR (reflection applied to the rotated image) = [[&#8730;2/2, -&#8730;2/2], [-&#8730;2/2, -&#8730;2/2]]. Comparing with the reflection matrix [[cos 2&#952;, sin 2&#952;], [sin 2&#952;, -cos 2&#952;]]: cos 2&#952; = &#8730;2/2 and sin 2&#952; = &#8730;2/2, so 2&#952; = 45&#176;, i.e. &#952; = 22.5&#176;. The combined transformation is a single reflection in the line y = x tan 22.5&#176;.</p>
+    </div>
+  </details>
+</div>
+<div class="question">
+  <p><strong>Q4:</strong> The matrix M = [[2, 0], [0, 3]] represents a transformation of the plane. Describe the transformation and state its area scale factor.</p>
+  <details style="margin-top: 0.5rem;">
+    <summary style="cursor: pointer; color: var(--accent); font-weight: 600;">Show Model Answer</summary>
+    <div style="margin-top: 0.5rem; padding: 0.75rem; background: var(--bg-secondary); border-left: 3px solid var(--success); border-radius: 4px;">
+      <p><strong>Answer:</strong> M maps (1, 0) to (2, 0) and (0, 1) to (0, 3): a stretch with scale factor 2 parallel to the x-axis and scale factor 3 parallel to the y-axis. The area scale factor is det(M) = (2)(3) - (0)(0) = 6, so areas are multiplied by 6.</p>
+    </div>
+  </details>
+</div>
 </div>
 </section>
 
@@ -166,16 +189,31 @@ Eigenvalues: λ₁ = 2, λ₂ = 5.</pre>
 </section>
 
 
-<nav class="topic-nav">
-<a href="../../topics/further-mathematics/complex-numbers-and-de-moivres-theorem.html">← Complex Numbers and De Moivre&#x27;s Theorem</a>
-<a href="../../further-mathematics.html">← Back to Further Mathematics Overview</a>
-<a href="../../index.html">All Subjects →</a>
-</nav>
+
+<section class="section">
+<h2>🧠 Flashcards (Spaced Repetition)</h2>
+<div id="flashcard-container"></div>
+</section>
+
+<section class="section">
+<h2>📝 Exam Questions by Topic</h2>
+<div id="exam-questions-container"></div>
+</section>
+
+<section class="section">
+<h2>🎯 Target Tests (Auto-Graded)</h2>
+<div id="target-tests-container"></div>
+</section>
 
 <section class="section">
 <h2>🎓 Smart Lesson (Guided)</h2>
 <div id="smart-lesson-container"></div>
 </section>
+<nav class="topic-nav">
+<a href="../../topics/further-mathematics/complex-numbers-and-de-moivres-theorem.html">← Complex Numbers and De Moivre&#x27;s Theorem</a>
+<a href="../../further-mathematics.html">← Back to Further Mathematics Overview</a>
+<a href="../../index.html">All Subjects →</a>
+</nav>
 </main>
 <footer class="site-footer">
 <p>A-Level Revise - Free revision notes for all subjects and exam boards</p>
@@ -238,6 +276,9 @@ sel.addEventListener('change',function(){apply(sel.value);});
 apply(sel.value);
 })();
 </script>
+<script src="../../flashcards/flashcards.js"></script>
+<script src="../../exam-questions/exam-questions.js"></script>
+<script src="../../target-tests/target-tests.js"></script>
 <script src="../../smart-lessons/smart-lessons.js"></script>
 </body>
 </html>

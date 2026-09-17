@@ -10,8 +10,8 @@
 <meta property="og:title" content="Algebraic Methods and Proof - A-Level Mathematics">
 <meta property="og:description" content="Proof by deduction, contradiction, exhaustion; algebraic fractions and partial fractions. Complete revision notes for A-Level Mathematics.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://www.scottrix.co.uk/alevelrevise/topics/mathematics/algebraic-methods-and-proof.html">
-<link rel="canonical" href="https://www.scottrix.co.uk/alevelrevise/topics/mathematics/algebraic-methods-and-proof.html">
+<meta property="og:url" content="https://www.scottrix.co.uk/alevellessons/topics/mathematics/algebraic-methods-and-proof.html">
+<link rel="canonical" href="https://www.scottrix.co.uk/alevellessons/topics/mathematics/algebraic-methods-and-proof.html">
 <meta property="og:site_name" content="A-Level Revise">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
@@ -27,6 +27,7 @@
 <nav class="nav">
 <a href="../../index.html#subjects">Subjects</a>
 <a href="../../mathematics.html">Mathematics</a>
+<a href="../../../alevellessons/topics/mathematics/algebraic-methods-and-proof.html" class="nav-lesson">🎓 Full lesson on Smart Lessons &rarr;</a>
 </nav>
 <button id="theme-toggle" class="theme-btn">🌙</button>
 </div>
@@ -98,6 +99,10 @@
 <h2>📋 Key Definitions and Core Concepts</h2>
 <div class="key-point"><strong>Proof by Contradiction:</strong> Establishing truth by demonstrating that assuming the statement to be false leads to a logical contradiction.</div>
 <div class="key-point"><strong>Partial Fractions:</strong> Decomposing rational fractions P(x)/Q(x) into sums of simpler terms with linear or quadratic denominators.</div>
+<div class="key-point"><strong>Proof by Deduction:</strong> Starting from known facts, definitions or established results and using a chain of valid logical steps to reach the required conclusion.</div>
+<div class="key-point"><strong>Proof by Exhaustion:</strong> Splitting a statement into a finite number of cases that cover all possibilities and proving each case separately.</div>
+<div class="key-point"><strong>Disproof by Counter-Example:</strong> Finding one specific value that satisfies the conditions of a statement but for which the statement fails; this disproves the statement.</div>
+<div class="key-point"><strong>Identity:</strong> A statement that is true for all values of the variable, denoted ≡; each side is simplified or manipulated independently when proving an identity.</div>
 </section>
 
 <section class="section">
@@ -146,6 +151,24 @@ Result: 8/(3(x - 2)) + 7/(3(x + 1)).</pre>
     </div>
   </details>
 </div>
+<div class="question">
+  <p><strong>Q3:</strong> Prove that n³ − n is divisible by 3 for all positive integers n.</p>
+  <details style="margin-top: 0.5rem;">
+    <summary style="cursor: pointer; color: var(--accent); font-weight: 600;">Show Model Answer</summary>
+    <div style="margin-top: 0.5rem; padding: 0.75rem; background: var(--bg-secondary); border-left: 3px solid var(--success); border-radius: 4px;">
+      <p><strong>Answer:</strong> n³ − n = n(n² − 1) = n(n − 1)(n + 1). This is a product of three consecutive integers, so exactly one of the factors is a multiple of 3. Hence the product is divisible by 3 for every positive integer n. ∎</p>
+    </div>
+  </details>
+</div>
+<div class="question">
+  <p><strong>Q4:</strong> Express (2x² + 3x + 5) / (x + 1)² in partial fractions.</p>
+  <details style="margin-top: 0.5rem;">
+    <summary style="cursor: pointer; color: var(--accent); font-weight: 600;">Show Model Answer</summary>
+    <div style="margin-top: 0.5rem; padding: 0.75rem; background: var(--bg-secondary); border-left: 3px solid var(--success); border-radius: 4px;">
+      <p><strong>Answer:</strong> The fraction is improper (numerator degree 2 = denominator degree 2), so divide first: 2(x + 1)² = 2x² + 4x + 2, and (2x² + 3x + 5) − (2x² + 4x + 2) = −x + 3. So the fraction = 2 + (−x + 3)/(x + 1)². Write (−x + 3)/(x + 1)² = A/(x + 1) + B/(x + 1)², so −x + 3 = A(x + 1) + B. Setting x = −1: B = 4. Comparing coefficients of x: A = −1. Result: 2 − 1/(x + 1) + 4/(x + 1)².</p>
+    </div>
+  </details>
+</div>
 </div>
 </section>
 
@@ -168,16 +191,31 @@ Result: 8/(3(x - 2)) + 7/(3(x + 1)).</pre>
 </section>
 
 
-<nav class="topic-nav">
-<a href="../../topics/mathematics/trigonometry.html">← Trigonometry</a>
-<a href="../../mathematics.html">← Back to Mathematics Overview</a>
-<a href="../../topics/mathematics/calculus-differentiation-and-integration.html">Calculus: Differentiation and Integration →</a>
-</nav>
+
+<section class="section">
+<h2>🧠 Flashcards (Spaced Repetition)</h2>
+<div id="flashcard-container"></div>
+</section>
+
+<section class="section">
+<h2>📝 Exam Questions by Topic</h2>
+<div id="exam-questions-container"></div>
+</section>
+
+<section class="section">
+<h2>🎯 Target Tests (Auto-Graded)</h2>
+<div id="target-tests-container"></div>
+</section>
 
 <section class="section">
 <h2>🎓 Smart Lesson (Guided)</h2>
 <div id="smart-lesson-container"></div>
 </section>
+<nav class="topic-nav">
+<a href="../../topics/mathematics/trigonometry.html">← Trigonometry</a>
+<a href="../../mathematics.html">← Back to Mathematics Overview</a>
+<a href="../../topics/mathematics/calculus-differentiation-and-integration.html">Calculus: Differentiation and Integration →</a>
+</nav>
 </main>
 <footer class="site-footer">
 <p>A-Level Revise - Free revision notes for all subjects and exam boards</p>
@@ -240,6 +278,9 @@ sel.addEventListener('change',function(){apply(sel.value);});
 apply(sel.value);
 })();
 </script>
+<script src="../../flashcards/flashcards.js"></script>
+<script src="../../exam-questions/exam-questions.js"></script>
+<script src="../../target-tests/target-tests.js"></script>
 <script src="../../smart-lessons/smart-lessons.js"></script>
 </body>
 </html>

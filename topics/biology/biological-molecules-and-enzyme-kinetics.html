@@ -10,8 +10,8 @@
 <meta property="og:title" content="Biological Molecules and Enzyme Kinetics - A-Level Biology">
 <meta property="og:description" content="Carbohydrates, lipids, proteins, nucleic acids, ATP, enzyme kinetics, competitive and non-competitive inhibition. Complete revision notes for A-Level Biology.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://www.scottrix.co.uk/alevelrevise/topics/biology/biological-molecules-and-enzyme-kinetics.html">
-<link rel="canonical" href="https://www.scottrix.co.uk/alevelrevise/topics/biology/biological-molecules-and-enzyme-kinetics.html">
+<meta property="og:url" content="https://www.scottrix.co.uk/alevellessons/topics/biology/biological-molecules-and-enzyme-kinetics.html">
+<link rel="canonical" href="https://www.scottrix.co.uk/alevellessons/topics/biology/biological-molecules-and-enzyme-kinetics.html">
 <meta property="og:site_name" content="A-Level Revise">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
@@ -27,6 +27,7 @@
 <nav class="nav">
 <a href="../../index.html#subjects">Subjects</a>
 <a href="../../biology.html">Biology</a>
+<a href="../../../alevellessons/topics/biology/biological-molecules-and-enzyme-kinetics.html" class="nav-lesson">🎓 Full lesson on Smart Lessons &rarr;</a>
 </nav>
 <button id="theme-toggle" class="theme-btn">🌙</button>
 </div>
@@ -98,6 +99,10 @@
 <h2>📋 Key Definitions and Core Concepts</h2>
 <div class="key-point"><strong>Induced Fit Model:</strong> Substrate binding causes conformational change in enzyme's active site, lowering activation energy.</div>
 <div class="key-point"><strong>Primary Structure:</strong> Unique sequence of amino acids linked by covalent peptide bonds in a polypeptide.</div>
+<div class="key-point"><strong>Tertiary Structure:</strong> 3D folding of a polypeptide into its final shape, stabilised by hydrogen, ionic and disulfide bonds between R-groups; determines the shape of the active site.</div>
+<div class="key-point"><strong>K_m (Michaelis Constant):</strong> Substrate concentration at which the reaction rate is half V_max; a lower K_m indicates a higher enzyme&ndash;substrate affinity.</div>
+<div class="key-point"><strong>V_max:</strong> Maximum rate of an enzyme-catalysed reaction, reached when all active sites are saturated with substrate; further increases in substrate concentration have no effect.</div>
+<div class="key-point"><strong>Triglyceride:</strong> One glycerol molecule joined to three fatty acids by ester bonds formed in condensation reactions; a hydrophobic energy store that releases more energy per gram than carbohydrates.</div>
 </section>
 
 <section class="section">
@@ -146,6 +151,24 @@
     </div>
   </details>
 </div>
+<div class="question">
+  <p><strong>Q3:</strong> Explain the effects of temperature and pH on the rate of enzyme-controlled reactions.</p>
+  <details style="margin-top: 0.5rem;">
+    <summary style="cursor: pointer; color: var(--accent); font-weight: 600;">Show Model Answer</summary>
+    <div style="margin-top: 0.5rem; padding: 0.75rem; background: var(--bg-secondary); border-left: 3px solid var(--success); border-radius: 4px;">
+      <p><strong>Answer:</strong> As temperature rises, substrate and enzyme molecules gain kinetic energy, so more successful enzyme&ndash;substrate complexes form per second and rate increases up to an optimum (about 37&nbsp;&deg;C in humans). Above the optimum, increased vibration breaks the hydrogen and ionic bonds holding the tertiary structure, denaturing the active site so substrate no longer fits and rate falls sharply. Each enzyme also has a pH optimum; deviation from it alters H&#8314;/OH&#8315; ion concentrations, disrupting ionic and hydrogen bonds so the active site is denatured and rate falls, often irreversibly at extremes.</p>
+    </div>
+  </details>
+</div>
+<div class="question">
+  <p><strong>Q4:</strong> Describe the biuret test for proteins and explain why sodium hydroxide is added before the copper(II) sulfate.</p>
+  <details style="margin-top: 0.5rem;">
+    <summary style="cursor: pointer; color: var(--accent); font-weight: 600;">Show Model Answer</summary>
+    <div style="margin-top: 0.5rem; padding: 0.75rem; background: var(--bg-secondary); border-left: 3px solid var(--success); border-radius: 4px;">
+      <p><strong>Answer:</strong> Add an equal volume of sodium hydroxide solution to the sample to make it alkaline, then add a few drops of dilute copper(II) sulfate solution and mix gently. A colour change from blue to lilac/purple indicates the presence of peptide bonds and therefore protein; if the solution remains blue, no protein is present. The sodium hydroxide provides the alkaline conditions required for Cu&#178;&#8314; ions to complex with the nitrogen atoms in peptide bonds, producing the lilac colour.</p>
+    </div>
+  </details>
+</div>
 </div>
 </section>
 
@@ -168,16 +191,31 @@
 </section>
 
 
-<nav class="topic-nav">
-<a href="../../topics/biology/homeostasis-and-the-nervous-system.html">← Homeostasis and the Nervous System</a>
-<a href="../../biology.html">← Back to Biology Overview</a>
-<a href="../../topics/biology/cell-structure-transport-and-immunology.html">Cell Structure, Transport and Immunology →</a>
-</nav>
+
+<section class="section">
+<h2>🧠 Flashcards (Spaced Repetition)</h2>
+<div id="flashcard-container"></div>
+</section>
+
+<section class="section">
+<h2>📝 Exam Questions by Topic</h2>
+<div id="exam-questions-container"></div>
+</section>
+
+<section class="section">
+<h2>🎯 Target Tests (Auto-Graded)</h2>
+<div id="target-tests-container"></div>
+</section>
 
 <section class="section">
 <h2>🎓 Smart Lesson (Guided)</h2>
 <div id="smart-lesson-container"></div>
 </section>
+<nav class="topic-nav">
+<a href="../../topics/biology/homeostasis-and-the-nervous-system.html">← Homeostasis and the Nervous System</a>
+<a href="../../biology.html">← Back to Biology Overview</a>
+<a href="../../topics/biology/cell-structure-transport-and-immunology.html">Cell Structure, Transport and Immunology →</a>
+</nav>
 </main>
 <footer class="site-footer">
 <p>A-Level Revise - Free revision notes for all subjects and exam boards</p>
@@ -240,6 +278,9 @@ sel.addEventListener('change',function(){apply(sel.value);});
 apply(sel.value);
 })();
 </script>
+<script src="../../flashcards/flashcards.js"></script>
+<script src="../../exam-questions/exam-questions.js"></script>
+<script src="../../target-tests/target-tests.js"></script>
 <script src="../../smart-lessons/smart-lessons.js"></script>
 </body>
 </html>

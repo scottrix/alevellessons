@@ -4,7 +4,7 @@
 <script>/* gcanonical-redirect */(function(){var p=location.pathname,q=location.search,h=location.hash,m=/^(.*)\/index\.html$/.exec(p);if(m){location.replace(m[1]+"/"+q+h);return}if(!p.endsWith("/")&&!/\.[a-z0-9]{1,10}$/i.test(p)){location.replace(p+".html"+q+h)}})();</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Networks and Internet - A-Level Computer Science Lessons Notes</title>
+<title>Networks and Internet - A-Level Computer Science Revise Notes</title>
 <meta name="description" content="A-Level Computer Science revision: Networks and Internet. Learning objectives, key points, worked examples and practice questions across AQA, Edexcel, OCR, WJEC and CCEA.">
 <meta name="keywords" content="A-Level Computer Science, Networks and Internet, revision notes, past papers, AQA, Edexcel, OCR, WJEC, CCEA">
 <meta property="og:title" content="Networks and Internet - A-Level Computer Science">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://www.scottrix.co.uk/alevellessons/topics/computer-science/networks-and-internet.html">
 <link rel="canonical" href="https://www.scottrix.co.uk/alevellessons/topics/computer-science/networks-and-internet.html">
-<meta property="og:site_name" content="A-Level Lessons">
+<meta property="og:site_name" content="A-Level Revise">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Networks and Internet">
@@ -22,10 +22,11 @@
 <body>
 <header class="site-header">
 <div class="header-content">
-<a href="../../index.html" class="logo">📚 A-Level Lessons</a>
+<a href="../../index.html" class="logo">📚 A-Level Revise</a>
 <nav class="nav">
 <a href="../../index.html#subjects">Subjects</a>
 <a href="../../computer-science.html">Computer Science</a>
+<a href="../../../alevellessons/topics/computer-science/networks-and-internet.html" class="nav-lesson">🎓 Full lesson on Smart Lessons &rarr;</a>
 </nav>
 <button id="theme-toggle" class="theme-btn">🌙</button>
 </div>
@@ -63,7 +64,7 @@
 </div>
 
 <main class="topic-content">
-<div class="disclaimer-banner"><strong>A-Level Lessons Aid:</strong> This resource is designed to support your revision and may contain errors. If you find a discrepancy with your class teaching, your teacher is correct -- please let us know at <a href="mailto:alevelrevise@scott.scottrix.co.uk">alevelrevise@scott.scottrix.co.uk</a>.</div>
+<div class="disclaimer-banner"><strong>A-Level Revise Aid:</strong> This resource is designed to support your revision and may contain errors. If you find a discrepancy with your class teaching, your teacher is correct -- please let us know at <a href="mailto:alevelrevise@scott.scottrix.co.uk">alevelrevise@scott.scottrix.co.uk</a>.</div>
 
 <nav class="breadcrumb">
 <a href="../../index.html">Home</a> <span>›</span>
@@ -119,6 +120,33 @@
 <p><strong>Questions:</strong></p>
 <ul><li>Subnet 192.168.1.0/24 into 4 subnets<span class="q-no-answer" title="Model answer not yet available - check with your teacher or the official mark scheme">&#10007; answer coming soon</span></li><li>Compare TCP vs UDP for video streaming<span class="q-no-answer" title="Model answer not yet available - check with your teacher or the official mark scheme">&#10007; answer coming soon</span></li><li>Explain DNS resolution steps<span class="q-no-answer" title="Model answer not yet available - check with your teacher or the official mark scheme">&#10007; answer coming soon</span></li><li>Describe SQL injection prevention<span class="q-no-answer" title="Model answer not yet available - check with your teacher or the official mark scheme">&#10007; answer coming soon</span></li><li>How does RSA key exchange work?<span class="q-no-answer" title="Model answer not yet available - check with your teacher or the official mark scheme">&#10007; answer coming soon</span></li></ul>
 </div>
+<div class="question">
+  <p><strong>Q1:</strong> Subnet 192.168.1.0/24 into 4 equal subnets. Give the new subnet mask and the network address of the first two subnets.</p>
+  <details style="margin-top: 0.5rem;">
+    <summary style="cursor: pointer; color: var(--accent); font-weight: 600;">Show Model Answer</summary>
+    <div style="margin-top: 0.5rem; padding: 0.75rem; background: var(--bg-secondary); border-left: 3px solid var(--success); border-radius: 4px;">
+      <p><strong>Answer:</strong> 4 subnets need 2 extra bits: /24 becomes /26, subnet mask 255.255.255.192. Each subnet spans 64 addresses: 192.168.1.0 (hosts .1-.62, broadcast .63) and 192.168.1.64 (hosts .65-.126, broadcast .127) — then .128 and .192.</p>
+    </div>
+  </details>
+</div>
+<div class="question">
+  <p><strong>Q2:</strong> Explain why UDP rather than TCP is often used for live video streaming.</p>
+  <details style="margin-top: 0.5rem;">
+    <summary style="cursor: pointer; color: var(--accent); font-weight: 600;">Show Model Answer</summary>
+    <div style="margin-top: 0.5rem; padding: 0.75rem; background: var(--bg-secondary); border-left: 3px solid var(--success); border-radius: 4px;">
+      <p><strong>Answer:</strong> UDP is connectionless: no 3-way handshake, no acknowledgements, no sequencing or retransmission, so it has much lower latency and overhead. A lost packet causes only a momentary glitch, whereas TCP's retransmissions would stall the stream and cause buffering — for live media, low delay matters more than perfect reliability.</p>
+    </div>
+  </details>
+</div>
+<div class="question">
+  <p><strong>Q3:</strong> Describe the steps a DNS resolver takes to translate www.example.co.uk into an IP address.</p>
+  <details style="margin-top: 0.5rem;">
+    <summary style="cursor: pointer; color: var(--accent); font-weight: 600;">Show Model Answer</summary>
+    <div style="margin-top: 0.5rem; padding: 0.75rem; background: var(--bg-secondary); border-left: 3px solid var(--success); border-radius: 4px;">
+      <p><strong>Answer:</strong> The client queries its local recursive resolver (usually the ISP's); if not cached, the resolver asks a root name server, which returns the TLD server for .uk/.co.uk; the TLD server returns the authoritative name server for example.co.uk; the authoritative server returns the A record (IPv4) or AAAA record (IPv6); the resolver caches the result and returns the IP address to the client.</p>
+    </div>
+  </details>
+</div>
 </div>
 </section>
 <section class="section">
@@ -133,26 +161,28 @@
 <h2>🔗 Further Reading & Resources</h2>
 <ul><li><a href="https://www.physicsandmathstutor.com/maths-revision/a-level-edexcel/pure-maths/networks-and-internet/" target="_blank" rel="noopener">Physics &amp; Maths Tutor - Networks and Internet</a> -- Free notes, worksheets, and past paper questions by topic</li><li><a href="https://drfrostmaths.com/" target="_blank" rel="noopener">Dr Frost Maths - Networks and Internet</a> -- Free resources, slides, and interactive questions</li><li><a href="https://www.bbc.co.uk/bitesize/search?q=Networks+and+Internet" target="_blank" rel="noopener">BBC Bitesize - Networks and Internet</a> -- BBC Bitesize revision resources</li></ul>
 </section>
+
+
+
 <section class="section">
-<h2>📚 Lesson Plan (50 minutes)</h2>
-<ol>
-<li><strong>Starter (5 min):</strong> Recall prior knowledge of networks and internet with quick questions.</li>
-<li><strong>Teaching (15 min):</strong> Work through each of the learning objectives, explaining principles step by step.</li>
-<li><strong>Key points review (5 min):</strong> Revisit the key points together, confirming understanding.</li>
-<li><strong>Worked example (10 min):</strong> Model the example question: Explain the TLS handshake process. Solution: 1. Client hello (supported ciphers). 2. Server hello (chosen cipher) + certificate (public key, CA signed). 3. Client verifies cert (CA trusted, not expired, domain matches). 4. Client generates pre-master secret, encrypts with server public key, sends. 5. Both derive session keys. 6. Encrypted communication begins</li>
-<li><strong>Practice (10 min):</strong> Students attempt the practice questions independently; circulate and support.</li>
-<li><strong>Plenary (5 min):</strong> Review answers and address misconceptions.</li>
-</ol>
-</section>
-<section class="section">
-<h2>🏠 Homework</h2>
-<ul><li>Subnet 192.168.1.0/24 into 4 subnets</li><li>Compare TCP vs UDP for video streaming</li><li>Explain DNS resolution steps</li><li>Describe SQL injection prevention</li><li>How does RSA key exchange work?</li></ul>
-</section>
-<section class="section">
-<h2>🧾 Assessment</h2>
-<p>Check practice answers against the model answer; use the built-in practice questions as formative assessment.</p>
+<h2>🧠 Flashcards (Spaced Repetition)</h2>
+<div id="flashcard-container"></div>
 </section>
 
+<section class="section">
+<h2>📝 Exam Questions by Topic</h2>
+<div id="exam-questions-container"></div>
+</section>
+
+<section class="section">
+<h2>🎯 Target Tests (Auto-Graded)</h2>
+<div id="target-tests-container"></div>
+</section>
+
+<section class="section">
+<h2>🎓 Smart Lesson (Guided)</h2>
+<div id="smart-lesson-container"></div>
+</section>
 <nav class="topic-nav">
 <a href="../../topics/computer-science/computer-systems-and-architecture.html">← Computer Systems and Architecture</a>
 <a href="../../computer-science.html">← Back to Computer Science Overview</a>
@@ -162,31 +192,23 @@
 
 
 
-
-<section class="section">
-<h2>🎓 Smart Lesson (Guided)</h2>
-<div id="smart-lesson-container"></div>
-</section>
-<nav class="topic-nav">
-<a href="../../../alevelrevise/topics/computer-science/networks-and-internet.html">&larr; Revision notes for this topic (A-Level Revise)</a>
-</nav>
 </main>
 <footer class="site-footer">
-<p>A-Level Lessons - Free revision notes for all subjects and exam boards</p>
+<p>A-Level Revise - Free revision notes for all subjects and exam boards</p>
 <p>Content for educational purposes only. Always cross-reference with official specifications.</p>
 <p>This site contains affiliate links. We may earn a commission if you purchase through these links.</p>
-<p>(c) 2025 | <a href="https://github.com/scottrix/alevellessons">GitHub</a> | <a href="../../privacy.html">Privacy Policy</a> | <a href="mailto:alevelrevise@scott.scottrix.co.uk">Contact</a></p>
+<p>(c) 2025 | <a href="https://github.com/scottrix/alevelrevise">GitHub</a> | <a href="../../privacy.html">Privacy Policy</a> | <a href="mailto:alevelrevise@scott.scottrix.co.uk">Contact</a></p>
 </footer>
 <script>
 document.getElementById('theme-toggle').addEventListener('click', function() {
 const root = document.documentElement;
 if (root.classList.contains('light-mode')) {
-root.classList.remove('light-mode'); this.textContent = '🌙'; localStorage.setItem('alevellessons-theme', 'dark');
+root.classList.remove('light-mode'); this.textContent = '🌙'; localStorage.setItem('alevelrevise-theme', 'dark');
 } else {
-root.classList.add('light-mode'); this.textContent = '☀️'; localStorage.setItem('alevellessons-theme', 'light');
+root.classList.add('light-mode'); this.textContent = '☀️'; localStorage.setItem('alevelrevise-theme', 'light');
 }
 });
-if (localStorage.getItem('alevellessons-theme') === 'light') {
+if (localStorage.getItem('alevelrevise-theme') === 'light') {
 document.documentElement.classList.add('light-mode'); document.getElementById('theme-toggle').textContent = '☀️';
 }
 </script>
@@ -233,5 +255,8 @@ sel.addEventListener('change',function(){apply(sel.value);});
 apply(sel.value);
 })();
 </script>
+<script src="../../flashcards/flashcards.js"></script>
+<script src="../../exam-questions/exam-questions.js"></script>
+<script src="../../target-tests/target-tests.js"></script>
 <script src="../../smart-lessons/smart-lessons.js"></script>
 </body></html>

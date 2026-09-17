@@ -4,7 +4,7 @@
 <script>/* gcanonical-redirect */(function(){var p=location.pathname,q=location.search,h=location.hash,m=/^(.*)\/index\.html$/.exec(p);if(m){location.replace(m[1]+"/"+q+h);return}if(!p.endsWith("/")&&!/\.[a-z0-9]{1,10}$/i.test(p)){location.replace(p+".html"+q+h)}})();</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Boolean Logic and Relational Databases - A-Level Computer Science Lessons Notes</title>
+<title>Boolean Logic and Relational Databases - A-Level Computer Science Revise Notes</title>
 <meta name="description" content="A-Level Computer Science revision: Boolean Logic and Relational Databases. Learning objectives, key points, worked examples and practice questions across AQA, Edexcel, OCR, WJEC and CCEA.">
 <meta name="keywords" content="A-Level Computer Science, Boolean Logic and Relational Databases, revision notes, past papers, AQA, Edexcel, OCR, WJEC, CCEA">
 <meta property="og:title" content="Boolean Logic and Relational Databases - A-Level Computer Science">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://www.scottrix.co.uk/alevellessons/topics/computer-science/boolean-logic-and-relational-databases.html">
 <link rel="canonical" href="https://www.scottrix.co.uk/alevellessons/topics/computer-science/boolean-logic-and-relational-databases.html">
-<meta property="og:site_name" content="A-Level Lessons">
+<meta property="og:site_name" content="A-Level Revise">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Boolean Logic and Relational Databases">
@@ -22,10 +22,11 @@
 <body>
 <header class="site-header">
 <div class="header-content">
-<a href="../../index.html" class="logo">📚 A-Level Lessons</a>
+<a href="../../index.html" class="logo">📚 A-Level Revise</a>
 <nav class="nav">
 <a href="../../index.html#subjects">Subjects</a>
 <a href="../../computer-science.html">Computer Science</a>
+<a href="../../../alevellessons/topics/computer-science/boolean-logic-and-relational-databases.html" class="nav-lesson">🎓 Full lesson on Smart Lessons &rarr;</a>
 </nav>
 <button id="theme-toggle" class="theme-btn">🌙</button>
 </div>
@@ -63,7 +64,7 @@
 </div>
 
 <main class="topic-content">
-<div class="disclaimer-banner"><strong>A-Level Lessons Aid:</strong> This resource is designed to support your revision and may contain errors. If you find a discrepancy with your class teaching, your teacher is correct -- please let us know at <a href="mailto:alevelrevise@scott.scottrix.co.uk">alevelrevise@scott.scottrix.co.uk</a>.</div>
+<div class="disclaimer-banner"><strong>A-Level Revise Aid:</strong> This resource is designed to support your revision and may contain errors. If you find a discrepancy with your class teaching, your teacher is correct -- please let us know at <a href="mailto:alevelrevise@scott.scottrix.co.uk">alevelrevise@scott.scottrix.co.uk</a>.</div>
 
 <nav class="breadcrumb">
 <a href="../../index.html">Home</a> <span>›</span>
@@ -119,6 +120,33 @@
 <p><strong>Questions:</strong></p>
 <ul><li>Simplify: A·(A+B) + A·B<span class="q-no-answer" title="Model answer not yet available - check with your teacher or the official mark scheme">&#10007; answer coming soon</span></li><li>Design full adder from half adders<span class="q-no-answer" title="Model answer not yet available - check with your teacher or the official mark scheme">&#10007; answer coming soon</span></li><li>Draw ER for library system<span class="q-no-answer" title="Model answer not yet available - check with your teacher or the official mark scheme">&#10007; answer coming soon</span></li><li>Write SQL: students with avg grade &gt; 70<span class="q-no-answer" title="Model answer not yet available - check with your teacher or the official mark scheme">&#10007; answer coming soon</span></li><li>Explain ACID with examples<span class="q-no-answer" title="Model answer not yet available - check with your teacher or the official mark scheme">&#10007; answer coming soon</span></li></ul>
 </div>
+<div class="question">
+  <p><strong>Q1:</strong> Simplify the Boolean expression A·(A + B) + A·B, naming the laws used.</p>
+  <details style="margin-top: 0.5rem;">
+    <summary style="cursor: pointer; color: var(--accent); font-weight: 600;">Show Model Answer</summary>
+    <div style="margin-top: 0.5rem; padding: 0.75rem; background: var(--bg-secondary); border-left: 3px solid var(--success); border-radius: 4px;">
+      <p><strong>Answer:</strong> A·(A + B) = A·A + A·B (distributive law) = A + A·B (idempotent law, A·A = A). Then A + A·B = A (absorption law). The whole expression simplifies to A.</p>
+    </div>
+  </details>
+</div>
+<div class="question">
+  <p><strong>Q2:</strong> Write an SQL query to list the names of students whose average grade is above 70.</p>
+  <details style="margin-top: 0.5rem;">
+    <summary style="cursor: pointer; color: var(--accent); font-weight: 600;">Show Model Answer</summary>
+    <div style="margin-top: 0.5rem; padding: 0.75rem; background: var(--bg-secondary); border-left: 3px solid var(--success); border-radius: 4px;">
+      <p><strong>Answer:</strong> SELECT name FROM students GROUP BY name HAVING AVG(grade) > 70; — the aggregate condition must go in HAVING (used after GROUP BY); WHERE filters individual rows and cannot contain aggregate functions.</p>
+    </div>
+  </details>
+</div>
+<div class="question">
+  <p><strong>Q3:</strong> Explain the difference between 2NF and 3NF in normalisation.</p>
+  <details style="margin-top: 0.5rem;">
+    <summary style="cursor: pointer; color: var(--accent); font-weight: 600;">Show Model Answer</summary>
+    <div style="margin-top: 0.5rem; padding: 0.75rem; background: var(--bg-secondary); border-left: 3px solid var(--success); border-radius: 4px;">
+      <p><strong>Answer:</strong> 2NF: the relation is in 1NF and has no partial dependencies — every non-key attribute depends on the whole composite primary key, not part of it. 3NF: additionally no transitive dependencies — no non-key attribute depends on another non-key attribute; each must depend on "the key, the whole key, and nothing but the key".</p>
+    </div>
+  </details>
+</div>
 </div>
 </section>
 <section class="section">
@@ -133,26 +161,28 @@
 <h2>🔗 Further Reading & Resources</h2>
 <ul><li><a href="https://www.physicsandmathstutor.com/maths-revision/a-level-edexcel/pure-maths/boolean-logic-and-relational-databases/" target="_blank" rel="noopener">Physics &amp; Maths Tutor - Boolean Logic and Relational Databases</a> -- Free notes, worksheets, and past paper questions by topic</li><li><a href="https://drfrostmaths.com/" target="_blank" rel="noopener">Dr Frost Maths - Boolean Logic and Relational Databases</a> -- Free resources, slides, and interactive questions</li><li><a href="https://www.bbc.co.uk/bitesize/search?q=Boolean+Logic+and+Relational+Databases" target="_blank" rel="noopener">BBC Bitesize - Boolean Logic and Relational Databases</a> -- BBC Bitesize revision resources</li></ul>
 </section>
+
+
+
 <section class="section">
-<h2>📚 Lesson Plan (50 minutes)</h2>
-<ol>
-<li><strong>Starter (5 min):</strong> Recall prior knowledge of boolean logic and relational databases with quick questions.</li>
-<li><strong>Teaching (15 min):</strong> Work through each of the learning objectives, explaining principles step by step.</li>
-<li><strong>Key points review (5 min):</strong> Revisit the key points together, confirming understanding.</li>
-<li><strong>Worked example (10 min):</strong> Model the example question: Normalise to 3NF: Student(StudentID, Name, CourseID, CourseName, TutorID, TutorName). Solution: FDs: StudentID-&gt;Name, CourseID-&gt;CourseName, TutorID, TutorID-&gt;TutorName. 1NF: atomic. 2NF: remove partial FD (CourseID-&gt;CourseName). Course(CourseID, CourseName, TutorID), Tutor(TutorID, TutorName), Student(StudentID, Name, CourseID). 3NF: remove transitive FD (TutorID-&gt;TutorName). Already in 3NF</li>
-<li><strong>Practice (10 min):</strong> Students attempt the practice questions independently; circulate and support.</li>
-<li><strong>Plenary (5 min):</strong> Review answers and address misconceptions.</li>
-</ol>
-</section>
-<section class="section">
-<h2>🏠 Homework</h2>
-<ul><li>Simplify: A·(A+B) + A·B</li><li>Design full adder from half adders</li><li>Draw ER for library system</li><li>Write SQL: students with avg grade &gt; 70</li><li>Explain ACID with examples</li></ul>
-</section>
-<section class="section">
-<h2>🧾 Assessment</h2>
-<p>Check practice answers against the model answer; use the built-in practice questions as formative assessment.</p>
+<h2>🧠 Flashcards (Spaced Repetition)</h2>
+<div id="flashcard-container"></div>
 </section>
 
+<section class="section">
+<h2>📝 Exam Questions by Topic</h2>
+<div id="exam-questions-container"></div>
+</section>
+
+<section class="section">
+<h2>🎯 Target Tests (Auto-Graded)</h2>
+<div id="target-tests-container"></div>
+</section>
+
+<section class="section">
+<h2>🎓 Smart Lesson (Guided)</h2>
+<div id="smart-lesson-container"></div>
+</section>
 <nav class="topic-nav">
 <a href="../../topics/computer-science/networks-and-internet.html">← Networks and Internet</a>
 <a href="../../computer-science.html">← Back to Computer Science Overview</a>
@@ -162,31 +192,23 @@
 
 
 
-
-<section class="section">
-<h2>🎓 Smart Lesson (Guided)</h2>
-<div id="smart-lesson-container"></div>
-</section>
-<nav class="topic-nav">
-<a href="../../../alevelrevise/topics/computer-science/boolean-logic-and-relational-databases.html">&larr; Revision notes for this topic (A-Level Revise)</a>
-</nav>
 </main>
 <footer class="site-footer">
-<p>A-Level Lessons - Free revision notes for all subjects and exam boards</p>
+<p>A-Level Revise - Free revision notes for all subjects and exam boards</p>
 <p>Content for educational purposes only. Always cross-reference with official specifications.</p>
 <p>This site contains affiliate links. We may earn a commission if you purchase through these links.</p>
-<p>(c) 2025 | <a href="https://github.com/scottrix/alevellessons">GitHub</a> | <a href="../../privacy.html">Privacy Policy</a> | <a href="mailto:alevelrevise@scott.scottrix.co.uk">Contact</a></p>
+<p>(c) 2025 | <a href="https://github.com/scottrix/alevelrevise">GitHub</a> | <a href="../../privacy.html">Privacy Policy</a> | <a href="mailto:alevelrevise@scott.scottrix.co.uk">Contact</a></p>
 </footer>
 <script>
 document.getElementById('theme-toggle').addEventListener('click', function() {
 const root = document.documentElement;
 if (root.classList.contains('light-mode')) {
-root.classList.remove('light-mode'); this.textContent = '🌙'; localStorage.setItem('alevellessons-theme', 'dark');
+root.classList.remove('light-mode'); this.textContent = '🌙'; localStorage.setItem('alevelrevise-theme', 'dark');
 } else {
-root.classList.add('light-mode'); this.textContent = '☀️'; localStorage.setItem('alevellessons-theme', 'light');
+root.classList.add('light-mode'); this.textContent = '☀️'; localStorage.setItem('alevelrevise-theme', 'light');
 }
 });
-if (localStorage.getItem('alevellessons-theme') === 'light') {
+if (localStorage.getItem('alevelrevise-theme') === 'light') {
 document.documentElement.classList.add('light-mode'); document.getElementById('theme-toggle').textContent = '☀️';
 }
 </script>
@@ -233,5 +255,8 @@ sel.addEventListener('change',function(){apply(sel.value);});
 apply(sel.value);
 })();
 </script>
+<script src="../../flashcards/flashcards.js"></script>
+<script src="../../exam-questions/exam-questions.js"></script>
+<script src="../../target-tests/target-tests.js"></script>
 <script src="../../smart-lessons/smart-lessons.js"></script>
 </body></html>
