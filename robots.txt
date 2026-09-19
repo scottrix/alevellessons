@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.scottrix.co.uk/alevellessons/sitemap.xml
+Sitemap: https://scottrix.github.io/alevellessons/sitemap.xml
