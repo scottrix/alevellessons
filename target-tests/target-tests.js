@@ -596,14 +596,14 @@ function initTopicTargetTests() {
 
   const topic = topicFile.replace('.html', '');
   const tierPart = tier ? '-' + tier.toLowerCase() : '';
-  const testUrl = `/alevelrevise/target-tests/${subject}-${topic}.json`;
+  const testUrl = `/alevellessons/target-tests/${subject}-${topic}.json`;
 
   const renderer = new TargetTestsRenderer('#target-tests-container', { showTimer: true });
   renderer.loadTests(testUrl, `${subject}-${topic}`).then(tests => {
     if (tests.length > 0) {
       renderer.render();
     } else {
-      container.innerHTML = '<p class="target-empty">Target tests coming soon for this topic.</p>';
+      var sec=container.closest(".section,section"); if(sec) sec.style.display="none"; else container.innerHTML='<p class="target-empty">Target tests coming soon for this topic.</p>';
     }
   });
 }
