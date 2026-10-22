@@ -107,6 +107,49 @@
 <div class="key-point">ACID: Atomicity (all-or-nothing), Consistency (valid state to valid state), Isolation (concurrent transactions do not interfere), Durability (committed changes survive crashes)</div>
 </section>
 <section class="section">
+<section class="section">
+<h2>🚀 Starter Activity (5 minutes)</h2>
+<div class="key-point"><p>Convert 11010110 from binary to denary. Write pseudocode for a linear search.</p></div>
+</section>
+
+<section class="section">
+<h2>📋 Teaching Script (35 minutes)</h2>
+<div class="key-point">
+<p><strong>Mins 0–5 — Hook & Recap:</strong> Convert 11010110 from binary to denary. Write pseudocode for a linear search.</p>
+<p><strong>Mins 5–15 — Direct Instruction:</strong> Present the key concepts, theories and frameworks above. For each, cover the essential facts, methods and conclusions.</p>
+<p><strong>Mins 15–25 — Application:</strong> Work through exam-style questions. Model answer structure for the command words used.</p>
+<p><strong>Mins 25–35 — Independent Practice:</strong> Students complete past-paper questions. Teacher circulates and provides targeted support.</p>
+</div>
+</section>
+
+<section class="section">
+<h2>⚠️ Common Misconceptions</h2>
+<div class="key-point"><p><strong>If a student says:</strong> "Binary is just computer language"</p><p><strong>Respond:</strong> Binary is a NUMBER SYSTEM (base 2) — all data is represented in it.</p></div><div class="key-point"><p><strong>If a student says:</strong> "An algorithm and a program are the same"</p><p><strong>Respond:</strong> An ALGORITHM is language-independent; a PROGRAM is an implementation.</p></div><div class="key-point"><p><strong>If a student says:</strong> "The internet and WWW are the same"</p><p><strong>Respond:</strong> The internet is the NETWORK; the WWW is a SERVICE on it.</p></div>
+</section>
+
+<section class="section">
+<h2>✅ Check for Understanding</h2>
+<div class="key-point"><p><strong>Hinge question:</strong> Ask students to explain the core concept in their own words to a partner. Listen for correct terminology and logical structure. Address gaps before independent practice.</p></div>
+</section>
+
+<section class="section">
+<h2>📊 Differentiation</h2>
+<div class="key-point">
+<p><strong>Support scaffold:</strong> Provide a scaffolded worksheet with sentence starters, a key-term glossary and partially completed diagrams.</p>
+<p><strong>Stretch & Challenge (Grade A/A*):</strong> Ask students to evaluate methodology, apply to unfamiliar contexts, or compare competing theories with supported judgements.</p>
+</div>
+</section>
+
+<section class="section">
+<h2>📝 Homework & Consolidation</h2>
+<div class="key-point">
+<p><strong>Consolidation (15 min):</strong> Write a summary of the key concepts in your own words.</p>
+<p><strong>Retrieval (10 min):</strong> Create 5 flashcards from the key definitions.</p>
+<p><strong>Exam practice (20 min):</strong> Complete one past-paper question with self-marking.</p>
+<p><strong>Extension (optional):</strong> Read the original study or research a real-world application.</p>
+</div>
+</section>
+
 <h2>Network fundamentals and the TCP/IP stack</h2>
 <p><strong>Topologies</strong> (AQA 4.5.2, WJEC 1.7): <em>star</em> — every node connects to a central switch; easy to add nodes, one cable fault isolates only that node, but the switch is a single point of failure; <em>bus</em> — all nodes share one backbone cable; cheap but collisions rise with traffic and a backbone break kills the network; <em>mesh</em> — nodes interconnect (full or partial); redundant paths give fault tolerance at the cost of cabling; <em>ring</em> — nodes in a loop with token passing. The exam pattern: given a scenario (school, office, safety-critical), name the best topology and justify with cost, fault tolerance and expansion.</p><p><strong>LAN vs WAN</strong> — the one-marker pair: a LAN spans one site, is owned by the organisation, and has high bandwidth/low latency; a WAN spans large distances using third-party (telecom) infrastructure — leased lines and the internet. <strong>Client-server vs peer-to-peer:</strong> client-server centralises services (files, databases, email) on dedicated servers — central control, security and backups, but the server is a cost and a bottleneck; peer-to-peer shares resources directly between equals — cheap for small networks but no central control, and security/backup are per-machine.</p><p><strong>The TCP/IP stack</strong> (AQA 4.5.4, OCR 1.3.3) has four layers, each using the layer below and serving the layer above:</p><table><tr><th>Layer</th><th>Role</th><th>Protocols</th></tr><tr><td>Application</td><td>Provides network services to programs</td><td>HTTP/HTTPS, DNS, FTP, SMTP, IMAP</td></tr><tr><td>Transport</td><td>End-to-end delivery, port numbers, reliability</td><td>TCP, UDP</td></tr><tr><td>Internet</td><td>Routing packets between networks by IP address</td><td>IP, ICMP</td></tr><tr><td>Link</td><td>Physical transmission on the local network (frames, MAC addresses)</td><td>Ethernet, WiFi</td></tr></table><p>The two examinable points: (1) <em>layering</em> — each layer's services are independent of the implementation of the others, so a protocol can change (WiFi to Ethernet) without touching the layers above, and the same stack works over any physical medium; (2) <em>encapsulation</em> — data moves down the stack gaining a header at each layer (TCP header with ports and sequence numbers, IP header with addresses, Ethernet frame with MAC addresses) and the headers are stripped back off at the receiver. Exam question pattern: <em>'Explain the purpose of each layer of the TCP/IP stack.'</em> Answer: application provides user-facing services; transport provides end-to-end delivery with ports and (with TCP) reliability; internet routes packets across networks by IP; link handles transmission over the physical local network.</p><p>Devices to know by role: a <em>switch</em> forwards frames within a LAN using MAC addresses; a <em>router</em> forwards packets between networks using IP addresses; a <em>firewall</em> filters traffic by rules; a <em>wireless access point</em> joins wireless clients to the wired LAN.</p>
 </section>

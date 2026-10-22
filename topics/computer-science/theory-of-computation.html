@@ -103,6 +103,49 @@
 <div class="key-point">The halting problem is undecidable: no algorithm can decide for every program/input whether it halts (AQA 4.2.3, WJEC 3.3)</div>
 </section>
 <section class="section">
+<section class="section">
+<h2>🚀 Starter Activity (5 minutes)</h2>
+<div class="key-point"><p>Convert 11010110 from binary to denary. Write pseudocode for a linear search.</p></div>
+</section>
+
+<section class="section">
+<h2>📋 Teaching Script (35 minutes)</h2>
+<div class="key-point">
+<p><strong>Mins 0–5 — Hook & Recap:</strong> Convert 11010110 from binary to denary. Write pseudocode for a linear search.</p>
+<p><strong>Mins 5–15 — Direct Instruction:</strong> Present the key concepts, theories and frameworks above. For each, cover the essential facts, methods and conclusions.</p>
+<p><strong>Mins 15–25 — Application:</strong> Work through exam-style questions. Model answer structure for the command words used.</p>
+<p><strong>Mins 25–35 — Independent Practice:</strong> Students complete past-paper questions. Teacher circulates and provides targeted support.</p>
+</div>
+</section>
+
+<section class="section">
+<h2>⚠️ Common Misconceptions</h2>
+<div class="key-point"><p><strong>If a student says:</strong> "Binary is just computer language"</p><p><strong>Respond:</strong> Binary is a NUMBER SYSTEM (base 2) — all data is represented in it.</p></div><div class="key-point"><p><strong>If a student says:</strong> "An algorithm and a program are the same"</p><p><strong>Respond:</strong> An ALGORITHM is language-independent; a PROGRAM is an implementation.</p></div><div class="key-point"><p><strong>If a student says:</strong> "The internet and WWW are the same"</p><p><strong>Respond:</strong> The internet is the NETWORK; the WWW is a SERVICE on it.</p></div>
+</section>
+
+<section class="section">
+<h2>✅ Check for Understanding</h2>
+<div class="key-point"><p><strong>Hinge question:</strong> Ask students to explain the core concept in their own words to a partner. Listen for correct terminology and logical structure. Address gaps before independent practice.</p></div>
+</section>
+
+<section class="section">
+<h2>📊 Differentiation</h2>
+<div class="key-point">
+<p><strong>Support scaffold:</strong> Provide a scaffolded worksheet with sentence starters, a key-term glossary and partially completed diagrams.</p>
+<p><strong>Stretch & Challenge (Grade A/A*):</strong> Ask students to evaluate methodology, apply to unfamiliar contexts, or compare competing theories with supported judgements.</p>
+</div>
+</section>
+
+<section class="section">
+<h2>📝 Homework & Consolidation</h2>
+<div class="key-point">
+<p><strong>Consolidation (15 min):</strong> Write a summary of the key concepts in your own words.</p>
+<p><strong>Retrieval (10 min):</strong> Create 5 flashcards from the key definitions.</p>
+<p><strong>Exam practice (20 min):</strong> Complete one past-paper question with self-marking.</p>
+<p><strong>Extension (optional):</strong> Read the original study or research a real-world application.</p>
+</div>
+</section>
+
 <h2>Abstraction and decomposition</h2>
 <p>Abstraction (AQA 4.2.1, OCR 2.1.5) is the deliberate removal of unnecessary detail. The exam wants you to <em>apply</em> it, not recite it. AQA names four flavours worth quoting:</p><ul><li><strong>Representational abstraction</strong> — build a simplified model of a real entity: a road map keeps roads and distances, removes lane widths and colour of buildings; a tube map keeps connections, removes distances entirely.</li><li><strong>Abstraction by reduction</strong> — remove detail until the problem is tractable, then categorise what remains as relevant or irrelevant.</li><li><strong>Procedural abstraction</strong> — a method hides <em>how</em> behind <em>what</em>: <code>sort(list)</code> hides the algorithm; callers abstract from the implementation.</li><li><strong>Functional abstraction</strong> — the result of procedural abstraction viewed purely as a mapping from inputs to output: <code>f(x) = x^2</code> regardless of how it computes.</li><li><strong>Data abstraction</strong> — separate a data structure's logical behaviour from its implementation: a stack is push/pop/LIFO no matter whether it is stored as an array or list.</li></ul><p><strong>Decomposition</strong> is the companion technique: split a problem into subproblems, solve each (recursively if needed), and combine. The standard 4-marker is <em>'Explain the benefits of abstraction in solving this problem.'</em> Full-credit structure: (1) state what detail is removed; (2) state why it is irrelevant to the goal; (3) state the consequence — smaller search space, faster to model, easier to reason about, reusable model. Example: modelling a queue at a supermarket — arrivals, service times and number of tills are relevant; customers' items, ages and payment methods are not; the abstracted simulation can be run thousands of times cheaply where the real experiment could not.</p><p>The A* link matters too: a heuristic function is abstraction in action — straight-line distance on a map abstracts away road curvature and traffic to give a cheap, admissible estimate. And the link to automation: once a problem is abstracted to a formal model (states, symbols, rules), it can be executed mechanically — which is exactly what a finite state machine or Turing machine is.</p>
 </section>
